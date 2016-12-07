@@ -1,5 +1,5 @@
 //
-//  CarListTableViewController.h
+//  CarBuyListCell.h
 //  QuickPos
 //
 //  Created by Lff on 16/12/7.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CarListTableViewController : UITableViewController
+@interface CarBuyListCell : UITableViewCell
 
 @end
