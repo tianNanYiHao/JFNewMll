@@ -60,15 +60,13 @@ static DBManger *_db;
 }
 
 //插入数据
-//-(BOOL)insertDataWithAddressModel:(AddressModel*)model;
-//{
-//    [_lock lock];
-//    NSString *sql = @"insert into app values(?,?,?)";
-//    
-//
-//    return <#expression#>
-//    
-//}
+-(BOOL)insertDataWithAddressModel:(AddressModel*)model;
+{
+    [_lock lock];
+    NSString *sql = @"insert into app values(?,?,?)";
+    
+    return nil;
+}
 
 
 
