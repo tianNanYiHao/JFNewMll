@@ -310,7 +310,7 @@
     _segmentedCtrl = [[UISegmentedControl alloc]init];
     _segmentedCtrl.layer.cornerRadius = 20;
     _segmentedCtrl.clipsToBounds = YES;
-    _segmentedCtrl = [[UISegmentedControl alloc]initWithItems:@[@"新世界商城",@"我的店铺"]];
+    _segmentedCtrl = [[UISegmentedControl alloc]initWithItems:@[@"百步生活",@"淘五金商城",@"我的店铺"]];
     _segmentedCtrl.frame = CGRectMake(10, 5, self.view.frame.size.width-20, 30);
     //修改颜色
     [_segmentedCtrl setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateNormal];
@@ -686,11 +686,26 @@
             
             [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在加载商品数据."];
             [request getTodyKillProductWithCardId:self.cataId];
-            
-
-           
+        
         }
         break;
+        case 2:
+        {
+            [self.button1 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+            [self.button2 setTitleColor:[UIColor lightGrayColor]  forState:UIControlStateNormal];
+            [self.button3 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+            [self.segview1 setHidden:YES];
+            [self.segview2 setHidden:YES];
+            [self.segview3 setHidden:YES];
+            [self.Segview4 setHidden:YES];
+            [self.segview5 setHidden:YES];
+            
+            [self.mainView bringSubviewToFront:self.shoplist1];
+            
+            [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在加载商品数据."];
+            [request getTodyKillProductWithCardId:self.cataId];
+        }
+            break;
         default:
             break;
     }
