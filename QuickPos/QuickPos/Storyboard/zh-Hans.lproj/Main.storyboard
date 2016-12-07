@@ -2358,11 +2358,11 @@
             </objects>
             <point key="canvasLocation" x="1140" y="659"/>
         </scene>
-        <!--商城-->
+        <!--首页-->
         <scene sceneID="2kn-su-FxC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a0v-5u-ijk" customClass="QuickPosNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="商城" image="tab_shop_normal" selectedImage="tab_shop_press" id="hbe-D6-x8g"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="tab_shop_normal" selectedImage="tab_shop_press" id="hbe-D6-x8g"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" shadowImage="jiantou" backIndicatorImage="jiantou" backIndicatorTransitionMaskImage="jiantou" id="ikS-w7-WPr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -2640,7 +2640,7 @@
             </objects>
             <point key="canvasLocation" x="-1541.5" y="1472.5"/>
         </scene>
-        <!--商城-->
+        <!--首页-->
         <scene sceneID="pX7-ta-yvA">
             <objects>
                 <viewController storyboardIdentifier="MallViewController" id="bM8-SV-eO4" customClass="MallViewController" sceneMemberID="viewController">
@@ -3738,8 +3738,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="商城" image="shangcheng@2x" id="cXP-ye-Nh5"/>
-                    <navigationItem key="navigationItem" title="商城" id="SYJ-fg-Exe">
+                    <tabBarItem key="tabBarItem" title="首页" image="shangcheng@2x" id="cXP-ye-Nh5"/>
+                    <navigationItem key="navigationItem" title="首页" id="SYJ-fg-Exe">
                         <barButtonItem key="rightBarButtonItem" image="serve_more" id="vZR-ir-o3O">
                             <connections>
                                 <action selector="showSetup:" destination="bM8-SV-eO4" id="ukc-9X-kgS"/>
@@ -4290,7 +4290,7 @@
             </objects>
             <point key="canvasLocation" x="3670" y="2220"/>
         </scene>
-        <!--商城-->
+        <!--首页-->
         <scene sceneID="IrD-Vu-2Ks">
             <objects>
                 <viewController storyboardIdentifier="EditMallViewController" id="Vgp-qC-FVa" customClass="EditMallViewController" sceneMemberID="viewController">
@@ -4473,8 +4473,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.96078431369999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="商城" image="shangcheng@2x" id="ppS-Nv-651"/>
-                    <navigationItem key="navigationItem" title="商城" id="n0T-1u-Eib">
+                    <tabBarItem key="tabBarItem" title="首页" image="shangcheng@2x" id="ppS-Nv-651"/>
+                    <navigationItem key="navigationItem" title="首页" id="n0T-1u-Eib">
                         <barButtonItem key="rightBarButtonItem" title="设置" id="sLj-T8-HB3"/>
                     </navigationItem>
                     <nil key="simulatedTopBarMetrics"/>
@@ -6962,103 +6962,22 @@
                                             <frame key="frameInset" width="320" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account_logo" id="10j-8L-DoM">
-                                                    <frame key="frameInset" minX="16" minY="9" width="70" height="70"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="account_logo" id="10j-8L-DoM">
+                                                    <frame key="frameInset" minX="125" minY="40" width="70" height="70"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="feM-Z8-mjl">
-                                                    <frame key="frameInset" minX="94" minY="36" width="56" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal">
-                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-------------" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" id="mNQ-N1-TTK">
-                                                    <frame key="frameInset" minX="99" minY="21" width="178" height="43"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="立即登录" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" id="mNQ-N1-TTK">
+                                                    <frame key="frameInset" minX="125" minY="110" width="70" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" id="jyH-hP-4VC">
-                                                    <frame key="frameInset" minY="95" width="320" height="60"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <subviews>
-                                                        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Z3N-j1-fCD">
-                                                            <frame key="frameInset" width="106" height="60"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="账户余额" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IlY-Ot-kcx">
-                                                                    <frame key="frameInset" minY="5" width="106" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IyA-cI-ZD5">
-                                                                    <frame key="frameInset" minY="31" width="106" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </view>
-                                                        <view contentMode="scaleToFill" id="aBA-wE-lnX">
-                                                            <frame key="frameInset" minX="107" width="106" height="60"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可提现余额" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AP3-6N-rUZ">
-                                                                    <frame key="frameInset" minY="5" width="106" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EFF-ox-KL5">
-                                                                    <frame key="frameInset" minY="31" width="106" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </view>
-                                                        <view contentMode="scaleToFill" id="077-Dq-7VB">
-                                                            <frame key="frameInset" minX="214" width="106" height="60"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T+0余额" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="P08-S6-J3W">
-                                                                    <frame key="frameInset" minY="5" width="106" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Eh-jT-ygf">
-                                                                    <frame key="frameInset" minY="31" width="106" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </view>
-                                                    </subviews>
-                                                    <color key="backgroundColor" red="0.91764705879999997" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="AccountBalance" destination="IyA-cI-ZD5" id="dzB-IO-Dle"/>
-                                            <outlet property="Balance" destination="6Eh-jT-ygf" id="O6I-mV-PgZ"/>
-                                            <outlet property="RunSubBalance" destination="EFF-ox-KL5" id="G0Q-jL-pWH"/>
                                             <outlet property="headicon" destination="10j-8L-DoM" id="K5A-EB-y2l"/>
-                                            <outlet property="headiconButton" destination="feM-Z8-mjl" id="yoO-pr-Cyo"/>
                                             <outlet property="usernameLabel" destination="mNQ-N1-TTK" id="m48-uh-tof"/>
                                         </connections>
                                     </tableViewCell>
