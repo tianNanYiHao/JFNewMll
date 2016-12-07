@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" colorMatched="YES" initialViewController="OJ6-Ip-iiJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" colorMatched="YES" initialViewController="OJ6-Ip-iiJ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -1060,11 +1060,37 @@
             <point key="canvasLocation" x="-82" y="4880"/>
         </scene>
         <!--购物车-->
+        <scene sceneID="2bC-kc-b4y">
+            <objects>
+                <viewController id="ku6-Dg-Ocd" customClass="CarBuyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gL2-uC-Bl5">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8yf-JZ-wTD">
+                                <frame key="frameInset" maxY="-25"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.089856537080000007" green="0.72731920809999995" blue="0.26498380890000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="购物车" image="22" id="5Ho-Bc-mBm"/>
+                    <navigationItem key="navigationItem" title="购物车" id="MvT-Xe-7pM"/>
+                    <connections>
+                        <outlet property="tableShowView" destination="8yf-JZ-wTD" id="JvP-Jq-3o7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fqw-Dd-2tW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-372" y="1295"/>
+        </scene>
+        <!--购物车-->
         <scene sceneID="0mp-l9-Zz5">
             <objects>
                 <viewController storyboardIdentifier="ConvenientServiceSB" id="S8P-EQ-59D" customClass="ConvenientServiceViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gYn-b2-8zk">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="qiM-QG-ek9">
@@ -1138,7 +1164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAC-Tx-yDE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-462" y="1375"/>
+            <point key="canvasLocation" x="-536" y="1332"/>
         </scene>
         <!--购物车-->
         <scene sceneID="PgK-oQ-2jk">
@@ -1152,12 +1178,12 @@
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="S8P-EQ-59D" kind="relationship" relationship="rootViewController" id="F3Q-0V-0UI"/>
+                        <segue destination="ku6-Dg-Ocd" kind="relationship" relationship="rootViewController" id="bOn-5e-NWZ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fu-XM-MJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="607"/>
+            <point key="canvasLocation" x="118" y="515"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="64I-QS-EQ6">
@@ -2355,7 +2381,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zxz-bQ-P3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-317" y="607"/>
+            <point key="canvasLocation" x="-305" y="567"/>
         </scene>
         <!--用户登录-->
         <scene sceneID="rF0-TC-yek">
@@ -4806,28 +4832,28 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sOf-fe-bKf">
-                                        <frame key="frameInset" minY="25" width="70.45%" height="21" maxX="13"/>
+                                        <frame key="frameInset" minY="25" width="70.10%" height="21" maxX="13"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.24983558058738708" green="0.25857910513877869" blue="0.31078270077705383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lCH-9H-zYX">
-                                        <frame key="frameInset" minY="97" width="70.45%" height="21" maxX="13"/>
+                                        <frame key="frameInset" minY="97" width="70.10%" height="21" maxX="13"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.24983558058738708" green="0.25857910513877869" blue="0.31078270077705383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ofa-7j-RBh">
-                                        <frame key="frameInset" minY="137" width="70.45%" height="21" maxX="13"/>
+                                        <frame key="frameInset" minY="137" width="70.10%" height="21" maxX="13"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.24983558058738708" green="0.25857910513877869" blue="0.31078270077705383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xI6-tN-Ubp">
-                                        <frame key="frameInset" minY="61" width="70.45%" height="21" maxX="13"/>
+                                        <frame key="frameInset" minY="61" width="70.10%" height="21" maxX="13"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.24983558058738708" green="0.25857910513877869" blue="0.31078270077705383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -8530,6 +8556,7 @@
     </scenes>
     <resources>
         <image name="0203_thumbnail" width="51" height="20"/>
+        <image name="22" width="40" height="40"/>
         <image name="ManualInput" width="167" height="78"/>
         <image name="ManualInput-1" width="17" height="17"/>
         <image name="NFCInduction" width="167" height="79"/>

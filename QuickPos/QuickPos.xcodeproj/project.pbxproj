@@ -651,6 +651,7 @@
 		BFE2EC801DE68AD60054C011 /* JFFlowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE2EC7E1DE68AD60054C011 /* JFFlowViewController.xib */; };
 		BFE2EC841DE6BA710054C011 /* JFFloewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE2EC821DE6BA710054C011 /* JFFloewCollectionViewCell.m */; };
 		BFE2EC851DE6BA710054C011 /* JFFloewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE2EC831DE6BA710054C011 /* JFFloewCollectionViewCell.xib */; };
+		BFEE69FE1DF7F1A2003A01C3 /* CarBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE69FD1DF7F1A2003A01C3 /* CarBuyViewController.m */; };
 		BFEF24C71DAA388B00D61F0F /* TrickMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF24C51DAA388B00D61F0F /* TrickMainViewController.m */; };
 		BFEF24C81DAA388B00D61F0F /* TrickMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFEF24C61DAA388B00D61F0F /* TrickMainViewController.xib */; };
 		BFEF38C91DAC855F0043A852 /* TrickTicketListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF38C71DAC855F0043A852 /* TrickTicketListCell.m */; };
@@ -1987,6 +1988,8 @@
 		BFE2EC811DE6BA710054C011 /* JFFloewCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFFloewCollectionViewCell.h; sourceTree = "<group>"; };
 		BFE2EC821DE6BA710054C011 /* JFFloewCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFFloewCollectionViewCell.m; sourceTree = "<group>"; };
 		BFE2EC831DE6BA710054C011 /* JFFloewCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFFloewCollectionViewCell.xib; sourceTree = "<group>"; };
+		BFEE69FC1DF7F1A2003A01C3 /* CarBuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarBuyViewController.h; sourceTree = "<group>"; };
+		BFEE69FD1DF7F1A2003A01C3 /* CarBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarBuyViewController.m; sourceTree = "<group>"; };
 		BFEF24C41DAA388B00D61F0F /* TrickMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrickMainViewController.h; sourceTree = "<group>"; };
 		BFEF24C51DAA388B00D61F0F /* TrickMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrickMainViewController.m; sourceTree = "<group>"; };
 		BFEF24C61DAA388B00D61F0F /* TrickMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrickMainViewController.xib; sourceTree = "<group>"; };
@@ -3116,6 +3119,7 @@
 		591BC1E21AEDFE690037199A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BFEE69FB1DF7F174003A01C3 /* CarBuy */,
 				BFE2EC7B1DE68AAA0054C011 /* Flow */,
 				BF093DD81DA8F0950011EFE6 /* TrainTicket */,
 				339DA4051D9920FD001BA189 /* YSTQuickPay */,
@@ -4819,6 +4823,15 @@
 			path = Flow;
 			sourceTree = "<group>";
 		};
+		BFEE69FB1DF7F174003A01C3 /* CarBuy */ = {
+			isa = PBXGroup;
+			children = (
+				BFEE69FC1DF7F1A2003A01C3 /* CarBuyViewController.h */,
+				BFEE69FD1DF7F1A2003A01C3 /* CarBuyViewController.m */,
+			);
+			path = CarBuy;
+			sourceTree = "<group>";
+		};
 		BFEF38DF1DAF2B670043A852 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
@@ -5780,6 +5793,7 @@
 				591BC3761AEDFE6A0037199A /* CardMachineTableViewCell.m in Sources */,
 				BF3C8FAB1D5834A50092AC19 /* ZXCapture.m in Sources */,
 				BF3C90221D5834A50092AC19 /* ZXModulusGF.m in Sources */,
+				BFEE69FE1DF7F1A2003A01C3 /* CarBuyViewController.m in Sources */,
 				BF3C90541D5834A50092AC19 /* ZXQRCodeWriter.m in Sources */,
 				591BC0B31AEDFE320037199A /* NSArray+Sort.m in Sources */,
 				591BC3871AEDFE6A0037199A /* TakeCashViewController.m in Sources */,
