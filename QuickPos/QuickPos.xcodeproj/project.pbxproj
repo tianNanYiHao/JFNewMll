@@ -652,6 +652,10 @@
 		BFE2EC841DE6BA710054C011 /* JFFloewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE2EC821DE6BA710054C011 /* JFFloewCollectionViewCell.m */; };
 		BFE2EC851DE6BA710054C011 /* JFFloewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE2EC831DE6BA710054C011 /* JFFloewCollectionViewCell.xib */; };
 		BFEE69FE1DF7F1A2003A01C3 /* CarBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE69FD1DF7F1A2003A01C3 /* CarBuyViewController.m */; };
+		BFEE6A0C1DF7FCCA003A01C3 /* CarBuyAddressListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE6A0A1DF7FCCA003A01C3 /* CarBuyAddressListCell.m */; };
+		BFEE6A0D1DF7FCCA003A01C3 /* CarBuyAddressListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFEE6A0B1DF7FCCA003A01C3 /* CarBuyAddressListCell.xib */; };
+		BFEE6A111DF8042D003A01C3 /* CarBuyListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE6A0F1DF8042D003A01C3 /* CarBuyListCell.m */; };
+		BFEE6A121DF8042D003A01C3 /* CarBuyListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFEE6A101DF8042D003A01C3 /* CarBuyListCell.xib */; };
 		BFEF24C71DAA388B00D61F0F /* TrickMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF24C51DAA388B00D61F0F /* TrickMainViewController.m */; };
 		BFEF24C81DAA388B00D61F0F /* TrickMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFEF24C61DAA388B00D61F0F /* TrickMainViewController.xib */; };
 		BFEF38C91DAC855F0043A852 /* TrickTicketListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF38C71DAC855F0043A852 /* TrickTicketListCell.m */; };
@@ -1990,6 +1994,12 @@
 		BFE2EC831DE6BA710054C011 /* JFFloewCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFFloewCollectionViewCell.xib; sourceTree = "<group>"; };
 		BFEE69FC1DF7F1A2003A01C3 /* CarBuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarBuyViewController.h; sourceTree = "<group>"; };
 		BFEE69FD1DF7F1A2003A01C3 /* CarBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarBuyViewController.m; sourceTree = "<group>"; };
+		BFEE6A091DF7FCCA003A01C3 /* CarBuyAddressListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarBuyAddressListCell.h; sourceTree = "<group>"; };
+		BFEE6A0A1DF7FCCA003A01C3 /* CarBuyAddressListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarBuyAddressListCell.m; sourceTree = "<group>"; };
+		BFEE6A0B1DF7FCCA003A01C3 /* CarBuyAddressListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarBuyAddressListCell.xib; sourceTree = "<group>"; };
+		BFEE6A0E1DF8042D003A01C3 /* CarBuyListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarBuyListCell.h; sourceTree = "<group>"; };
+		BFEE6A0F1DF8042D003A01C3 /* CarBuyListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarBuyListCell.m; sourceTree = "<group>"; };
+		BFEE6A101DF8042D003A01C3 /* CarBuyListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarBuyListCell.xib; sourceTree = "<group>"; };
 		BFEF24C41DAA388B00D61F0F /* TrickMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrickMainViewController.h; sourceTree = "<group>"; };
 		BFEF24C51DAA388B00D61F0F /* TrickMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrickMainViewController.m; sourceTree = "<group>"; };
 		BFEF24C61DAA388B00D61F0F /* TrickMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrickMainViewController.xib; sourceTree = "<group>"; };
@@ -4828,6 +4838,12 @@
 			children = (
 				BFEE69FC1DF7F1A2003A01C3 /* CarBuyViewController.h */,
 				BFEE69FD1DF7F1A2003A01C3 /* CarBuyViewController.m */,
+				BFEE6A0E1DF8042D003A01C3 /* CarBuyListCell.h */,
+				BFEE6A0F1DF8042D003A01C3 /* CarBuyListCell.m */,
+				BFEE6A101DF8042D003A01C3 /* CarBuyListCell.xib */,
+				BFEE6A091DF7FCCA003A01C3 /* CarBuyAddressListCell.h */,
+				BFEE6A0A1DF7FCCA003A01C3 /* CarBuyAddressListCell.m */,
+				BFEE6A0B1DF7FCCA003A01C3 /* CarBuyAddressListCell.xib */,
 			);
 			path = CarBuy;
 			sourceTree = "<group>";
@@ -5165,6 +5181,7 @@
 				BF3C8F761D5834A50092AC19 /* ScanResultViewController.xib in Resources */,
 				D5B09C0D1BCE371C00AC4881 /* MyAccount2TableViewCell.xib in Resources */,
 				339B9A5A1D7D68A6004D0E1B /* README.txt in Resources */,
+				BFEE6A121DF8042D003A01C3 /* CarBuyListCell.xib in Resources */,
 				87E058DD1C044DBD00C4A4C1 /* Icon-60@3x.png in Resources */,
 				88F406E81B2810890010ABAA /* CodeView.xib in Resources */,
 				591BC0D81AEDFE330037199A /* PEPhotoCropEditor.bundle in Resources */,
@@ -5207,6 +5224,7 @@
 				AEE5F6151C4E199F006FAF60 /* UMSCommentInputController.xib in Resources */,
 				88E6BC021AB029BD00AD89E0 /* Images.xcassets in Resources */,
 				591BC3981AEDFE6A0037199A /* ClearUpView.xib in Resources */,
+				BFEE6A0D1DF7FCCA003A01C3 /* CarBuyAddressListCell.xib in Resources */,
 				339B9A591D7D68A6004D0E1B /* read_me.txt in Resources */,
 				AEE5F6191C4E199F006FAF60 /* UMSLoginViewController.xib in Resources */,
 				591BC3681AEDFE6A0037199A /* UserInfoView.xib in Resources */,
@@ -5264,6 +5282,7 @@
 				BF3C8FCB1D5834A50092AC19 /* ZXInvertedLuminanceSource.m in Sources */,
 				BF3C8F781D5834A50092AC19 /* ZXingWrapper.m in Sources */,
 				BF3C8FB91D5834A50092AC19 /* ZXByteArray.m in Sources */,
+				BFEE6A111DF8042D003A01C3 /* CarBuyListCell.m in Sources */,
 				591BC37D1AEDFE6A0037199A /* MyAccountHeaderTableViewCell.m in Sources */,
 				BF3C902E1D5834A50092AC19 /* ZXPDF417ScanningDecoder.m in Sources */,
 				BF3E10071D49B3D1003F0F89 /* CompaneyDetialController.m in Sources */,
@@ -5729,6 +5748,7 @@
 				BF3C90211D5834A50092AC19 /* ZXUPCEReader.m in Sources */,
 				591BC36E1AEDFE6A0037199A /* AddBankcardViewController.m in Sources */,
 				BF3C90041D5834A50092AC19 /* ZXRSSDataCharacter.m in Sources */,
+				BFEE6A0C1DF7FCCA003A01C3 /* CarBuyAddressListCell.m in Sources */,
 				BFC0421B1D70120A0090CAFC /* AFAutoPurgingImageCache.m in Sources */,
 				BF3C901C1D5834A50092AC19 /* ZXUPCEANExtension2Support.m in Sources */,
 				BF3C90351D5834A50092AC19 /* ZXPDF417ErrorCorrection.m in Sources */,
