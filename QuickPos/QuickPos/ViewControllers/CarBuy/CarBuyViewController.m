@@ -24,10 +24,15 @@
     self.navigationController.navigationBar.tintColor = [Common hexStringToColor:@"#ffffff"];//返回键颜色
     self.navigationController.navigationBar.contentMode = UIViewContentModeScaleAspectFit;
     
+    _tableShowView.delegate = self;
     
     
+}
+
+-(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    tableView.tintColor = [UIColor redColor];
     
-    
+    return nil;
 }
 
 - (void)didReceiveMemoryWarning {
