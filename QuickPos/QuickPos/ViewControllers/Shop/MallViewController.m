@@ -192,7 +192,7 @@
     [self createSegmented];
     [self creatRightBtn];
     
-    self.title = @"商城";
+    self.title = @"首页";
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBarHidden = NO;
     
