@@ -652,6 +652,8 @@
 		BFE2EC841DE6BA710054C011 /* JFFloewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE2EC821DE6BA710054C011 /* JFFloewCollectionViewCell.m */; };
 		BFE2EC851DE6BA710054C011 /* JFFloewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE2EC831DE6BA710054C011 /* JFFloewCollectionViewCell.xib */; };
 		BFEE69FE1DF7F1A2003A01C3 /* CarBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE69FD1DF7F1A2003A01C3 /* CarBuyViewController.m */; };
+		BFEE6A021DF7FC46003A01C3 /* CarListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE6A001DF7FC46003A01C3 /* CarListTableViewController.m */; };
+		BFEE6A031DF7FC46003A01C3 /* CarListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFEE6A011DF7FC46003A01C3 /* CarListTableViewController.xib */; };
 		BFEF24C71DAA388B00D61F0F /* TrickMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF24C51DAA388B00D61F0F /* TrickMainViewController.m */; };
 		BFEF24C81DAA388B00D61F0F /* TrickMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFEF24C61DAA388B00D61F0F /* TrickMainViewController.xib */; };
 		BFEF38C91DAC855F0043A852 /* TrickTicketListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEF38C71DAC855F0043A852 /* TrickTicketListCell.m */; };
@@ -1990,6 +1992,9 @@
 		BFE2EC831DE6BA710054C011 /* JFFloewCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFFloewCollectionViewCell.xib; sourceTree = "<group>"; };
 		BFEE69FC1DF7F1A2003A01C3 /* CarBuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarBuyViewController.h; sourceTree = "<group>"; };
 		BFEE69FD1DF7F1A2003A01C3 /* CarBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarBuyViewController.m; sourceTree = "<group>"; };
+		BFEE69FF1DF7FC46003A01C3 /* CarListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarListTableViewController.h; sourceTree = "<group>"; };
+		BFEE6A001DF7FC46003A01C3 /* CarListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarListTableViewController.m; sourceTree = "<group>"; };
+		BFEE6A011DF7FC46003A01C3 /* CarListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarListTableViewController.xib; sourceTree = "<group>"; };
 		BFEF24C41DAA388B00D61F0F /* TrickMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrickMainViewController.h; sourceTree = "<group>"; };
 		BFEF24C51DAA388B00D61F0F /* TrickMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrickMainViewController.m; sourceTree = "<group>"; };
 		BFEF24C61DAA388B00D61F0F /* TrickMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrickMainViewController.xib; sourceTree = "<group>"; };
@@ -4828,6 +4833,9 @@
 			children = (
 				BFEE69FC1DF7F1A2003A01C3 /* CarBuyViewController.h */,
 				BFEE69FD1DF7F1A2003A01C3 /* CarBuyViewController.m */,
+				BFEE69FF1DF7FC46003A01C3 /* CarListTableViewController.h */,
+				BFEE6A001DF7FC46003A01C3 /* CarListTableViewController.m */,
+				BFEE6A011DF7FC46003A01C3 /* CarListTableViewController.xib */,
 			);
 			path = CarBuy;
 			sourceTree = "<group>";
@@ -5158,6 +5166,7 @@
 				87E058DA1C044DBD00C4A4C1 /* Icon-40@3x.png in Resources */,
 				591BC3B41AEDFE6A0037199A /* SafeStringKeyBoard.xib in Resources */,
 				87E058E41C044DBD00C4A4C1 /* Icon-Small.png in Resources */,
+				BFEE6A031DF7FC46003A01C3 /* CarListTableViewController.xib in Resources */,
 				591BC37A1AEDFE6A0037199A /* IncomedataViewController.xib in Resources */,
 				BF581EBB1D4EF6790073A8F6 /* ComplaintViewController.xib in Resources */,
 				87E058DC1C044DBD00C4A4C1 /* Icon-60@2x.png in Resources */,
@@ -5803,6 +5812,7 @@
 				BF3C90231D5834A50092AC19 /* ZXModulusPoly.m in Sources */,
 				BF3C8FD41D5834A50092AC19 /* ZXDataMatrixDecoder.m in Sources */,
 				BF3C8FD71D5834A50092AC19 /* ZXDataMatrixASCIIEncoder.m in Sources */,
+				BFEE6A021DF7FC46003A01C3 /* CarListTableViewController.m in Sources */,
 				591BC0DA1AEDFE330037199A /* MKAnnotationView+WebCache.m in Sources */,
 				591BC0DB1AEDFE330037199A /* NSData+ImageContentType.m in Sources */,
 				BF3C90061D5834A50092AC19 /* ZXRSSPair.m in Sources */,
