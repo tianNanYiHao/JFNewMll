@@ -10,10 +10,15 @@
 
 @interface CarBuyViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableShowView;
+@property (weak, nonatomic) IBOutlet UIButton *buyBtn;//结算按钮
+@property (weak, nonatomic) IBOutlet UILabel *moneyShowLab;//金额Lab
 
 @end
 
 @implementation CarBuyViewController
+//结算点击事件
+- (IBAction)buyBtnClick:(id)sender {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
