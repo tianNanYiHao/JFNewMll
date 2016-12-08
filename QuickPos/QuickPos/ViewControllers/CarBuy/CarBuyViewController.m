@@ -7,6 +7,7 @@
 //
 
 #import "CarBuyViewController.h"
+#import "CarBuyListCell.h"
 
 @interface CarBuyViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableShowView;
@@ -18,6 +19,7 @@
 @implementation CarBuyViewController
 //结算点击事件
 - (IBAction)buyBtnClick:(id)sender {
+    
 }
 
 - (void)viewDidLoad {
@@ -28,9 +30,22 @@
     self.navigationController.navigationBar.barTintColor = [Common hexStringToColor:@"#068bf4"];//导航栏颜色
     self.navigationController.navigationBar.tintColor = [Common hexStringToColor:@"#ffffff"];//返回键颜色
     self.navigationController.navigationBar.contentMode = UIViewContentModeScaleAspectFit;
+
+    
+    
+    
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self createTableView];
+}
+
+-(void)createTableView
+{
     
     _tableShowView.delegate = self;
-    
+    _tableShowView.dataSource = self;
+    [_tableShowView registerNib:[UINib nibWithNibName:@"CarBuyListCell" bundle:nil] forCellReuseIdentifier:@"CarBuyListCell"];
     
 }
 
@@ -39,6 +54,27 @@
     
     return nil;
 }
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 3;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 45;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 2;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 90;
+}
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *ID = @"CarBuyListCell";
+    CarBuyListCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    return cell;
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
