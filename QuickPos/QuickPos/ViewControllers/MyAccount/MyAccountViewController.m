@@ -29,6 +29,7 @@
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+Add.h"
 #import "MyImessageViewController.h"
+#import "customBtn.h"
 
 @interface MyAccountViewController ()<UITableViewDataSource,UITableViewDelegate,ResponseData,UIAlertViewDelegate,getRespDesc>{
     
@@ -738,14 +739,7 @@
 //设置footerView
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     
-//    UIView *footerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
-//    
-//    UILabel *titleLabel1 = [[UILabel alloc]initWithFrame:CGRectMake(50, 0, 100, 44)];
-//    titleLabel1.text = @"激活数量:";
-//    titleLabel1.textColor = [UIColor darkGrayColor];
-//    titleLabel1.font = [UIFont systemFontOfSize:12];
-//    titleLabel1.textAlignment = NSTextAlignmentLeft;
-//    [footerView addSubview:titleLabel1];
+
     
     UIView *sectionFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 414, 5)];
     sectionFooterView.backgroundColor = [UIColor clearColor];
@@ -754,23 +748,38 @@
         return sectionFooterView;
         
     }else if(section == 1){
+    
+        UIView *view1 = [[UIView alloc]initWithFrame:CGRectMake(0, 1, 320, 88)];
+        view1.backgroundColor = [UIColor whiteColor];
         
-        UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(0, 1, 159, 86)];
+        UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(0, 1, 159,68)];
         [btn1 setImage:[UIImage imageNamed:@"wait_ship"] forState:UIControlStateNormal];
-        [btn1 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-//        [btn1 setTitle:@"待发货" forState:UIControlStateNormal];
         
-        [btn1.titleLabel setTextAlignment:NSTextAlignmentJustified];
-        btn1.backgroundColor = [UIColor whiteColor];
+        UILabel *label1 = [[UILabel alloc]initWithFrame:CGRectMake(0, 68, 159, 10)];
+        label1.text = @"待收货";
+        label1.font = [UIFont systemFontOfSize:14];
+        label1.textColor = [UIColor lightGrayColor];
+        label1.textAlignment = NSTextAlignmentCenter;
+        [view1 addSubview:label1];
+        [view1 addSubview:btn1];
         
-        UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(160, 1, 161, 86)];
-        btn2.backgroundColor = [UIColor whiteColor];
+        UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(160, 1, 161, 68)];
         [btn2 setImage:[UIImage imageNamed:@"wait_receipt"] forState:UIControlStateNormal];
         
-        [sectionFooterView addSubview:btn2];
-        [sectionFooterView addSubview:btn1];
-        
-        
+        UILabel *label2 = [[UILabel alloc]initWithFrame:CGRectMake(160, 68, 159, 10)];
+        label2.text = @"待发货";
+        label2.font = [UIFont systemFontOfSize:14];
+        label2.textColor = [UIColor lightGrayColor];
+        label2.textAlignment = NSTextAlignmentCenter;
+        [view1 addSubview:btn2];
+        [view1 addSubview:label2];
+    
+    //vertical_line
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(159, 0, 1, 88)];
+        imageView.image = [UIImage imageNamed:@"vertical_line"];
+        [view1 addSubview:imageView];
+    
+        [sectionFooterView addSubview:view1];
         return sectionFooterView;
     }
 
