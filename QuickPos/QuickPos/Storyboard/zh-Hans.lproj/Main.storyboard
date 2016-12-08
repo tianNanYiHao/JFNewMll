@@ -1068,16 +1068,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8yf-JZ-wTD">
-                                <frame key="frameInset" maxY="-25"/>
+                                <frame key="frameInset" maxY="5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <view contentMode="scaleToFill" misplaced="YES" id="VJ7-0v-Ppk">
+                                <frame key="frameInset" minY="406" width="100.00%" height="102.04%"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="合计:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XiX-Hk-2TY">
+                                        <frame key="frameInset" minX="15" minY="15" width="50" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="¥ 652" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7ef-XI-I8q">
+                                        <frame key="frameInset" minX="55" minY="15" width="100" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="1" green="0.078731205190893605" blue="0.050750307012862317" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7eu-7i-8Gg">
+                                        <frame key="frameInset" minY="15" width="100" height="31" maxX="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.089856537080000007" green="0.72731920809999995" blue="0.26498380890000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="结  算">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buyBtnClick:" destination="ku6-Dg-Ocd" eventType="touchUpInside" id="Fjg-nk-qj1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.07873120519" blue="0.050750307010000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.089856537080000007" green="0.72731920809999995" blue="0.26498380890000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="购物车" image="22" id="5Ho-Bc-mBm"/>
                     <navigationItem key="navigationItem" title="购物车" id="MvT-Xe-7pM"/>
                     <connections>
+                        <outlet property="buyBtn" destination="7eu-7i-8Gg" id="srv-8U-dVN"/>
+                        <outlet property="moneyShowLab" destination="7ef-XI-I8q" id="HAC-Va-OuV"/>
                         <outlet property="tableShowView" destination="8yf-JZ-wTD" id="JvP-Jq-3o7"/>
                     </connections>
                 </viewController>
