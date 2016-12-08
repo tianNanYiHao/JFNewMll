@@ -110,8 +110,8 @@
                                                                      nil]];
     
     
-    
-    [self creatRightBtn];
+    //右上角点击按钮
+//    [self creatRightBtn];
     
 
     userDefaults = [NSUserDefaults standardUserDefaults];
@@ -132,9 +132,7 @@
     
     
     self.tuichu.backgroundColor = [UIColor whiteColor];
-//    self.tuichu.layer.cornerRadius = 5;
-//    self.tuichu.titleLabel.textColor = [UIColor whiteColor];
-//    self.tuichu.backgroundColor = [Common hexStringToColor:@"fe976f"];
+
     
  
     self.OutFootView.backgroundColor = [UIColor groupTableViewBackgroundColor];
@@ -147,7 +145,7 @@
     [rightBtn addTarget:self action:@selector(rightBtn:) forControlEvents:UIControlEventTouchUpInside];
     
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
-    //    [rightBtn release];
+
     self.navigationItem.rightBarButtonItem = rightItem;
 }
 
@@ -170,7 +168,7 @@
     [self.navigationController.navigationBar setShadowImage:[Common createImageWithColor:[UIColor clearColor]]];
     
     
-//    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:63/255.0 green:146/255.0 blue:236/255.0 alpha:1];
+
     self.tabBarController.tabBar.hidden = NO;
     
     dataDic = [NSMutableDictionary dictionary];
@@ -180,8 +178,8 @@
 
         //已经登陆
         [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"加载中."];
-        [requst userInfo:[AppDelegate getUserBaseData].mobileNo];
-        [requst getVirtualAccountBalance:@"00" token:[AppDelegate getUserBaseData].token];
+
+//        [requst getVirtualAccountBalance:@"00" token:[AppDelegate getUserBaseData].token];
         [requst userInfo:[AppDelegate getUserBaseData].mobileNo];
         
     }else{
@@ -255,43 +253,43 @@
     }
     
     
-    if(type == REQUEST_ACCTENQUIRY && [dict[@"respCode"] isEqual:@"0000"] ){
-        
-        dataDic = dict;
-        
-        double userSum = [[dataDic objectForKey:@"availableAmt"] doubleValue];
-        double withdrawSum = [[dataDic objectForKey:@"cashAvailableAmt"] doubleValue];
-        double CashAmt = [[dataDic objectForKey:@"immCashAmt"]doubleValue];
-        double agent = [[dataDic objectForKey:@"agentAmt"]doubleValue];
-        UserTypes = [dataDic objectForKey:@"userType"];
-        self.agentNum = [dataDic objectForKey:@"agentNum"];
-        double agentRt = [[dataDic objectForKey:@"agentRate"]doubleValue];
-        
-        
-        NSLog(@"%@",UserTypes);
-        availableAmtStr = [NSString stringWithFormat:@"%0.2f",userSum/100];
-        cashAvailableAmtStr = [NSString stringWithFormat:@"%0.2f",withdrawSum/100];
-        immCashAmt = [NSString stringWithFormat:@"%0.2f",CashAmt/100];
-        agentAmt = [NSString stringWithFormat:@"%0.2f",agent/100];
-        self.agentRate = [NSString stringWithFormat:@"%0.2f",agentRt/100];
-        
-        
-        NSLog(@"%f  %@",agentRt,self.agentRate);
-        
-        
-        if(availableAmtStr == nil){
-            
-            availableAmtStr = @"0.00";
-            
-        }else if (cashAvailableAmtStr == nil){
-            
-            cashAvailableAmtStr = @"0.00";
-            
-        }
-        
-        [self.myAccountTableView reloadData];
-        
-    }
+//    if(type == REQUEST_ACCTENQUIRY && [dict[@"respCode"] isEqual:@"0000"] ){
+//        
+//        dataDic = dict;
+//        
+//        double userSum = [[dataDic objectForKey:@"availableAmt"] doubleValue];
+//        double withdrawSum = [[dataDic objectForKey:@"cashAvailableAmt"] doubleValue];
+//        double CashAmt = [[dataDic objectForKey:@"immCashAmt"]doubleValue];
+//        double agent = [[dataDic objectForKey:@"agentAmt"]doubleValue];
+//        UserTypes = [dataDic objectForKey:@"userType"];
+//        self.agentNum = [dataDic objectForKey:@"agentNum"];
+//        double agentRt = [[dataDic objectForKey:@"agentRate"]doubleValue];
+//        
+//        
+//        NSLog(@"%@",UserTypes);
+//        availableAmtStr = [NSString stringWithFormat:@"%0.2f",userSum/100];
+//        cashAvailableAmtStr = [NSString stringWithFormat:@"%0.2f",withdrawSum/100];
+//        immCashAmt = [NSString stringWithFormat:@"%0.2f",CashAmt/100];
+//        agentAmt = [NSString stringWithFormat:@"%0.2f",agent/100];
+//        self.agentRate = [NSString stringWithFormat:@"%0.2f",agentRt/100];
+//        
+//        
+//        NSLog(@"%f  %@",agentRt,self.agentRate);
+//        
+//        
+//        if(availableAmtStr == nil){
+//            
+//            availableAmtStr = @"0.00";
+//            
+//        }else if (cashAvailableAmtStr == nil){
+//            
+//            cashAvailableAmtStr = @"0.00";
+//            
+//        }
+//        
+//        [self.myAccountTableView reloadData];
+//        
+//    }
     if(type == REQUEST_QUICKPAYSTATE && [dict[@"respCode"] isEqual:@"0000"] ){
         
         NSString *message = [[[dict objectForKey:@"data"] objectForKey:@"result"] objectForKey:@"resultCode"];
@@ -424,14 +422,6 @@
                
                 
             }
-        if (indexPath.row == 1) {
-        
-            
-            
-//            UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(0, 44, 160, 88)];
-//            btn1.backgroundColor = [UIColor cyanColor];
-//            [cell addSubview:btn1];
-        }
     }
     if (indexPath.section == 2) {
 
@@ -449,265 +439,14 @@
             
         }
     }
-//    if (indexPath.section == 3) {
-//        //认证状态显示
-//        if(indexPath.row == 0){
-//            if([state isEqual:@"3"]){//已通过
-//                
-//                cell.titleLabel.text = L(@"ImproveInformationForCertified");
-//                cell.userInteractionEnabled = NO;
-//                cell.logoImageView.image = [UIImage imageNamed:@"account_Real"];
-//                
-//                cell.UserQuantityLabel.hidden = YES;
-//                cell.Quantity.hidden = YES;
-//                cell.RunSubLabel.hidden = YES;
-//                cell.RunSub.hidden = YES;
-//                cell.lineView.hidden = YES;
-//                
-//            }else if ([state isEqual:@"4"]){
-//                if ([stateRemake isEqualToString:@""]) {
-//                    cell.titleLabel.text = L(@"ImproveInformationForNotThrough");//未通过
-//                    
-//                    cell.UserQuantityLabel.hidden = YES;
-//                    cell.Quantity.hidden = YES;
-//                    cell.RunSubLabel.hidden = YES;
-//                    cell.RunSub.hidden = YES;
-//                    cell.lineView.hidden = YES;
-//                }else
-//                {
-//                    NSString *str = [NSString stringWithFormat:@"%@-[%@]",L(@"ImproveInformationForNotThrough"),stateRemake];
-//                    cell.titleLabel.text = str;
-//                    
-//                    cell.UserQuantityLabel.hidden = YES;
-//                    cell.Quantity.hidden = YES;
-//                    cell.RunSubLabel.hidden = YES;
-//                    cell.RunSub.hidden = YES;
-//                    cell.lineView.hidden = YES;
-//                }
-//                cell.userInteractionEnabled = YES;
-//                cell.logoImageView.image = [UIImage imageNamed:@"account_Real"];
-//                
-//                cell.UserQuantityLabel.hidden = YES;
-//                cell.Quantity.hidden = YES;
-//                cell.RunSubLabel.hidden = YES;
-//                cell.RunSub.hidden = YES;
-//                cell.lineView.hidden = YES;
-//                
-//            }else if ([state isEqual:@"2"]){//审核中
-//                
-//                cell.titleLabel.text = L(@"ImproveInformationForReviewing");
-//                cell.userInteractionEnabled = NO;
-//                cell.UserQuantityLabel.hidden = YES;
-//                cell.Quantity.hidden = YES;
-//                cell.RunSubLabel.hidden = YES;
-//                cell.RunSub.hidden = YES;
-//                cell.lineView.hidden = YES;
-//                cell.logoImageView.image = [UIImage imageNamed:@"account_Real"];
-//                
-//            }else if ([state isEqual:@"0"] || [state isEqual:@""]){
-//                
-//                cell.titleLabel.text = L(@"ImproveInformationForUnauthorized");
-//                cell.userInteractionEnabled = YES;
-//                cell.UserQuantityLabel.hidden = YES;
-//                cell.Quantity.hidden = YES;
-//                cell.RunSubLabel.hidden = YES;
-//                cell.RunSub.hidden = YES;
-//                cell.lineView.hidden = YES;
-//                cell.logoImageView.image = [UIImage imageNamed:@"account_Real"];
-//                
-//            }else if ([state isEqual:@"1"]){//缺少照片
-//                
-//                cell.titleLabel.text = L(@"ImproveInformationForLackOfPhotos");
-//                cell.userInteractionEnabled = YES;
-//                cell.UserQuantityLabel.hidden = YES;
-//                cell.Quantity.hidden = YES;
-//                cell.RunSubLabel.hidden = YES;
-//                cell.RunSub.hidden = YES;
-//                cell.lineView.hidden = YES;
-//                cell.logoImageView.image = [UIImage imageNamed:@"account_Real"];
-//            }else if ([state isEqual:@"5"]){//照片上传中
-//                
-//                cell.titleLabel.text = L(@"ImproveInformationForCross");
-//                cell.logoImageView.image = [UIImage imageNamed:@"account_Real"];
-//                cell.UserQuantityLabel.hidden = YES;
-//                cell.Quantity.hidden = YES;
-//                cell.RunSubLabel.hidden = YES;
-//                cell.RunSub.hidden = YES;
-//                cell.lineView.hidden = YES;
-//            }
-//            
-//        }
-//        
-//        
-//        
-//        if (indexPath.row == 1){
-//            
-//            cell.titleLabel.text = L(@"MyMessage");//我的消息
-//            cell.logoImageView.image = [UIImage imageNamed:@"account_news"];
-//            cell.UserQuantityLabel.hidden = YES;
-//            cell.Quantity.hidden = YES;
-//            cell.RunSubLabel.hidden = YES;
-//            cell.RunSub.hidden = YES;
-//            cell.lineView.hidden = YES;
-//            
-//        }
-//        
-//        
-//    }
-//    if (indexPath.section == 4) {
-//        if (indexPath.row == 0){
-//            
-//            cell.titleLabel.text = @"激活码";//快捷支付认证码
-//            cell.logoImageView.image = [UIImage imageNamed:@"account_quick"];
-//            cell.UserQuantityLabel.hidden = YES;
-//            cell.Quantity.hidden = YES;
-//            cell.RunSubLabel.hidden = YES;
-//            cell.RunSub.hidden = YES;
-//            cell.lineView.hidden = YES;
-//            
-//        }
-//        if (indexPath.row == 1){
-//            
-//            cell.titleLabel.text = L(@"ChangePassword");//修改密码
-//            cell.logoImageView.image = [UIImage imageNamed:@"account_lock"];
-//            cell.UserQuantityLabel.hidden = YES;
-//            cell.Quantity.hidden = YES;
-//            cell.RunSubLabel.hidden = YES;
-//            cell.RunSub.hidden = YES;
-//            cell.lineView.hidden = YES;
-//        }
-//        
-//    }
-//    if (indexPath.section == 5) {
-//        
-//        if (indexPath.row == 1){
-//        
-//            cell.titleLabel.text = [NSString stringWithFormat:@"APP使用说明"];
-//            cell.logoImageView.image = [UIImage imageNamed:@"account_app"];
-//            cell.UserQuantityLabel.hidden = YES;
-//            cell.Quantity.hidden = YES;
-//            cell.RunSubLabel.hidden = YES;
-//            cell.RunSub.hidden = YES;
-//            cell.lineView.hidden = YES;
-//        }
-//        
-//        if (indexPath.row == 0){
-//            cell.titleLabel.text = L(@"MyCreditCardMachine");//我的刷卡器
-//            cell.logoImageView.image = [UIImage imageNamed:@"account_my"];
-//            cell.UserQuantityLabel.hidden = YES;
-//            cell.Quantity.hidden = YES;
-//            cell.RunSubLabel.hidden = YES;
-//            cell.RunSub.hidden = YES;
-//            cell.lineView.hidden = YES;
-//        }
-//    }
-//    
-////    if (indexPath.section == 1 && indexPath.row == 0) {
-////        cell.accessoryType = UITableViewCellAccessoryNone;  //第一组第一行没有小箭头
-////    }
-////    else{
-//////        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-////        cell.accessoryType = UITableViewCellAccessoryNone;
-////    }
-//    
-//    cell.accessoryType = UITableViewCellAccessoryNone;//取消箭头
+
     return cell;
     
 }
 //点击cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-//    if(indexPath.section == 1 && indexPath.row == 0){
-//        
-//        
-//        
-//        WithdrawalViewController *withdrawalVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WithdrawalVC"];
-//        
-//        withdrawalVC.destinationType = WITHDRAW;
-//        withdrawalVC.navigationItem.title = L(@"Withdrawal");
-//        withdrawalVC.name = realNameStr;
-//        withdrawalVC.hidesBottomBarWhenPushed = YES;
-//        
-//        [self.navigationController pushViewController:withdrawalVC animated:YES];//提现
-// 
-//        
-//    }
-//    else if (indexPath.section == 1 && indexPath.row == 1){//我的分润提现
-//        
-////        MyRunSubWithdrawViewController *MyRunSubWithdrawVc = [self.storyboard instantiateViewControllerWithIdentifier:@"MyRunSubWithdrawVc"];
-////        MyRunSubWithdrawVc.name = realNameStr;
-////        MyRunSubWithdrawVc.hidesBottomBarWhenPushed = YES;
-////        [self.navigationController pushViewController:MyRunSubWithdrawVc animated:YES];
-//        
-//    }
-//    
-//    else if(indexPath.section == 2 && indexPath.row == 0){
-//        
-//        TransactionRecordsViewController *transactionRecordsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"transactionrecordsVC"];
-//        
-//        transactionRecordsVC.hidesBottomBarWhenPushed = YES;
-//        
-//        [self.navigationController pushViewController:transactionRecordsVC animated:YES];//交易记录
-//        
-//        
-//    }
-//    
-//    else if(indexPath.section == 3 && indexPath.row == 0){
-//        
-//        PerfectInformationViewController *informationVC = [self.storyboard instantiateViewControllerWithIdentifier:@"informationVC"]; //加载故事板中的viewController
-//        informationVC.authenFlag = self.authenFlag;
-//        informationVC.IDstr = ID;//传值
-//        informationVC.realNameStr = realNameStr;//传值
-//        informationVC.hidesBottomBarWhenPushed = YES;//隐藏tabbar
-//        
-//        [self.navigationController pushViewController:informationVC animated:YES];//完善资料
-//        
-//        
-//    }
-//    
-//    else if(indexPath.section == 3 && indexPath.row == 1){
-//        
-//        MyImessageViewController *MyImessageVc = [self.storyboard instantiateViewControllerWithIdentifier:@"MyImessageViewController"];
-//        
-//        MyImessageVc.hidesBottomBarWhenPushed = YES;
-//        
-//        [self.navigationController pushViewController:MyImessageVc animated:YES];//我的消息
-//        
-//    }
-//    else if(indexPath.section == 4 && indexPath.row == 0){
-//        
-//        [requst quickPayCodeState];
-//        
-//    }
-//    
-//    else if(indexPath.section == 4 && indexPath.row == 1){
-//        
-//        MyChangePasswordViewController *myChangePasswordVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyChangePasswordVC"];
-//        
-//        myChangePasswordVC.hidesBottomBarWhenPushed = YES;
-//        
-//        [self.navigationController pushViewController:myChangePasswordVC animated:YES];//修改密码
-//        
-//    }
-//    else if(indexPath.section == 5 && indexPath.row == 1){
-//        
-//        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//        
-//        InstructionsForUseViewController * instructionsVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"InstructionsForUseVc"];
-//        instructionsVC.hidesBottomBarWhenPushed = YES;
-//        [self.navigationController pushViewController:instructionsVC animated:YES];//APP使用说明
-//        
-//    }
-//    
-//    else if(indexPath.section == 5 && indexPath.row == 0){
-//        
-//        MyCreditCardMachineViewController *myCreditCardMachineVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyCreditCardMachineVC"];
-//        
-//        myCreditCardMachineVC.hidesBottomBarWhenPushed = YES;
-//        
-//        [self.navigationController pushViewController:myCreditCardMachineVC animated:YES];//我的刷卡器
-//        
-//    }
+
     
 }
 
@@ -754,6 +493,7 @@
         
         UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(0, 1, 159,68)];
         [btn1 setImage:[UIImage imageNamed:@"wait_ship"] forState:UIControlStateNormal];
+        [btn1 addTarget:self action:@selector(waitShip:) forControlEvents:UIControlEventTouchUpInside];
         
         UILabel *label1 = [[UILabel alloc]initWithFrame:CGRectMake(0, 68, 159, 10)];
         label1.text = @"待收货";
@@ -765,6 +505,7 @@
         
         UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(160, 1, 161, 68)];
         [btn2 setImage:[UIImage imageNamed:@"wait_receipt"] forState:UIControlStateNormal];
+         [btn2 addTarget:self action:@selector(waitReceipt:) forControlEvents:UIControlEventTouchUpInside];
         
         UILabel *label2 = [[UILabel alloc]initWithFrame:CGRectMake(160, 68, 159, 10)];
         label2.text = @"待发货";
@@ -786,6 +527,16 @@
     return sectionFooterView;
 }
 
+//待发货点击方法
+- (void)waitShip:(UIButton *)btn
+{
+    NSLog(@"<<<待发货>>>");
+}
+//待收货点击方法
+- (void)waitReceipt:(UIButton *)btn
+{
+    NSLog(@"<<<待收货>>>");
+}
 
 //imagedata解压
 - (NSData *)headImage:(NSString *)icon{
