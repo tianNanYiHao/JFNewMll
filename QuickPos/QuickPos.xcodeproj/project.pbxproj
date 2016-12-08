@@ -46,6 +46,7 @@
 		33502CB91D470A8E005C1873 /* MyCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33502CB81D470A8E005C1873 /* MyCardCell.m */; };
 		33502CBC1D472C17005C1873 /* CompaniesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33502CBB1D472C17005C1873 /* CompaniesViewController.m */; };
 		3357637C1DF8FCBA00CC56E7 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3357637B1DF8FCBA00CC56E7 /* MyAccountViewController.m */; };
+		3357637F1DF90F1A00CC56E7 /* customBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3357637E1DF90F1A00CC56E7 /* customBtn.m */; };
 		33659CA31D536D5300D5C3FC /* PSTAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33659CA21D536D5300D5C3FC /* PSTAlertController.m */; };
 		33898F011D90D8CE0046EF4E /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 33898F001D90D8CE0046EF4E /* libxml2.tbd */; };
 		33898F031D90D9510046EF4E /* Bugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33898F021D90D9510046EF4E /* Bugly.framework */; };
@@ -824,6 +825,8 @@
 		33502CBB1D472C17005C1873 /* CompaniesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompaniesViewController.m; sourceTree = "<group>"; };
 		3357637A1DF8FCBA00CC56E7 /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
 		3357637B1DF8FCBA00CC56E7 /* MyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountViewController.m; sourceTree = "<group>"; };
+		3357637D1DF90F1A00CC56E7 /* customBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customBtn.h; sourceTree = "<group>"; };
+		3357637E1DF90F1A00CC56E7 /* customBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customBtn.m; sourceTree = "<group>"; };
 		33659CA11D536D5300D5C3FC /* PSTAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTAlertController.h; sourceTree = "<group>"; };
 		33659CA21D536D5300D5C3FC /* PSTAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTAlertController.m; sourceTree = "<group>"; };
 		33898EFD1D90D7BF0046EF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -3005,6 +3008,8 @@
 		591BC0FA1AEDFE690037199A /* data */ = {
 			isa = PBXGroup;
 			children = (
+				3357637D1DF90F1A00CC56E7 /* customBtn.h */,
+				3357637E1DF90F1A00CC56E7 /* customBtn.m */,
 				591BC0FB1AEDFE690037199A /* BankCardData.h */,
 				591BC0FC1AEDFE690037199A /* BankCardData.m */,
 				591BC0FD1AEDFE690037199A /* BaseData.h */,
@@ -5518,6 +5523,7 @@
 				591BC0EF1AEDFE330037199A /* PinYinForObjc.m in Sources */,
 				591BC0B81AEDFE320037199A /* MBProgressHUD.m in Sources */,
 				BF3C8F701D5834A50092AC19 /* LBXScanViewController.m in Sources */,
+				3357637F1DF90F1A00CC56E7 /* customBtn.m in Sources */,
 				BF3C8FE81D5834A50092AC19 /* ZXMaxiCodeReader.m in Sources */,
 				BF3C8FE51D5834A50092AC19 /* ZXMaxiCodeBitMatrixParser.m in Sources */,
 				BF3C8FFB1D5834A50092AC19 /* ZXRSSExpandedDecodedObject.m in Sources */,
