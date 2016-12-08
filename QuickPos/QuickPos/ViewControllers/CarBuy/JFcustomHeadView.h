@@ -10,5 +10,10 @@
 
 @interface JFcustomHeadView : UIView
 @property (weak, nonatomic) IBOutlet UIView *bgView;
+@property (weak, nonatomic) IBOutlet UIButton *btnChoose;
+@property (weak, nonatomic) IBOutlet UILabel *mallNameLab;
 
+@property (nonatomic,strong)    NSString * mallName;
+
+- (instancetype)initWithFrame:(CGRect)frame titleName:(NSString*)name;
 @end

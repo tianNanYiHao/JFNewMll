@@ -59,6 +59,8 @@
             </constraints>
             <connections>
                 <outlet property="bgView" destination="TNU-1f-QPo" id="ADX-D0-20g"/>
+                <outlet property="btnChoose" destination="orf-iO-6tO" id="x0B-pO-eDr"/>
+                <outlet property="mallNameLab" destination="hH3-ok-lWr" id="2y5-Dj-dHL"/>
             </connections>
             <point key="canvasLocation" x="-245.5" y="-115.5"/>
         </view>

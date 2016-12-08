@@ -11,6 +11,9 @@
 #import "JFcustomHeadView.h"
 
 @interface CarBuyViewController ()<UITableViewDelegate,UITableViewDataSource>
+{
+//    JFcustomHeadView *jfheadView;
+}
 @property (weak, nonatomic) IBOutlet UITableView *tableShowView;
 @property (weak, nonatomic) IBOutlet UIButton *buyBtn;//结算按钮
 @property (weak, nonatomic) IBOutlet UILabel *moneyShowLab;//金额Lab
@@ -27,40 +30,59 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"购物车";
+    self.view.backgroundColor = [Common hexStringToColor:@"ECEBF5"];
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.barTintColor = [Common hexStringToColor:@"#068bf4"];//导航栏颜色
     self.navigationController.navigationBar.tintColor = [Common hexStringToColor:@"#ffffff"];//返回键颜色
     self.navigationController.navigationBar.contentMode = UIViewContentModeScaleAspectFit;
-    
 }
+
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self createTableView];
-
 }
 
 -(void)createTableView
 {
-    
     _tableShowView.delegate = self;
     _tableShowView.dataSource = self;
+    _tableShowView.backgroundColor = [Common hexStringToColor:@"ECEBF5"];
     [_tableShowView registerNib:[UINib nibWithNibName:@"CarBuyListCell" bundle:nil] forCellReuseIdentifier:@"CarBuyListCell"];
-    
-    
 }
-
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    tableView.tintColor = [UIColor redColor];
-    JFcustomHeadView *view = [[JFcustomHeadView alloc] init];
+//    if (section == 0) {
+//     JFcustomHeadView *jfheadView = [[JFcustomHeadView alloc] initWithFrame:CGRectZero] ;
+//        jfheadView.mallName = @"百步生活1";
+//        return jfheadView;
+//    }else if (section == 1){
+//        JFcustomHeadView *jfheadView = [[JFcustomHeadView alloc] initWithFrame:CGRectZero];
+//        jfheadView.mallName = @"百步生活2";
+//        return jfheadView;
+//    }else if (section ==2 ){
+//        JFcustomHeadView *jfheadView = [[JFcustomHeadView alloc] initWithFrame:CGRectZero];
+//        jfheadView.mallName = @"百步生活3";
+//        return jfheadView;
+//    }else {
+//        return nil;
+//    }
     
-    return view;
+    JFcustomHeadView *jfheadView = [[JFcustomHeadView alloc] initWithFrame:CGRectZero titleName:@"百步生活"];
+    return jfheadView;
 }
 
+-(UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, NEWWIDTH, 15)];
+    bgView.backgroundColor = [Common hexStringToColor:@"ECEBF5"];
+    return bgView;
+}
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 3;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 45;
+    return 40;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 15;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0) {

@@ -7,13 +7,18 @@
 //
 
 #import "JFcustomHeadView.h"
+@interface JFcustomHeadView(){
+    NSString *nameTitle;
+}
+@end
 
 @implementation JFcustomHeadView
 
 
-- (instancetype)initWithFrame:(CGRect)frame{
+- (instancetype)initWithFrame:(CGRect)frame titleName:(NSString*)name{
     self = [super initWithFrame:frame];
     if (self) {
+        nameTitle = name;
         [self baseInit];
     }
     return self;
@@ -35,6 +40,16 @@
 - (void)layoutSubviews{
     self.frame = CGRectMake(0,0, NEWWIDTH, 40);
     self.backgroundColor = [UIColor whiteColor];
+    _bgView.backgroundColor = [UIColor whiteColor];
+
+}
+//- (void)setMallName:(NSString *)mallName{
+//    _mallName = mallName;
+//}
+
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    _mallNameLab.text = nameTitle;
 }
 
 /*
