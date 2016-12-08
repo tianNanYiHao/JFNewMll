@@ -20,7 +20,7 @@
                         <state key="normal" image="Circular_unselected"/>
                         <state key="selected" image="Circular_selected"/>
                     </button>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XFK-2H-IkY">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="9047C286-D57A-4F8B-A803-47AC2414EFBA" translatesAutoresizingMaskIntoConstraints="NO" id="XFK-2H-IkY">
                         <constraints>
                             <constraint firstAttribute="width" constant="65" id="S5G-GV-TB9"/>
                             <constraint firstAttribute="height" constant="65" id="sUI-Vf-XDL"/>
@@ -103,6 +103,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="9047C286-D57A-4F8B-A803-47AC2414EFBA" width="46" height="46"/>
         <image name="Circular_selected" width="15" height="15"/>
         <image name="Circular_unselected" width="15" height="15"/>
         <image name="Horizontal_line" width="1" height="1"/>
