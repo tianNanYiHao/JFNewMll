@@ -8,6 +8,7 @@
 
 #import "CarBuyViewController.h"
 #import "CarBuyListCell.h"
+#import "JFcustomHeadView.h"
 
 @interface CarBuyViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableShowView;
@@ -30,14 +31,12 @@
     self.navigationController.navigationBar.barTintColor = [Common hexStringToColor:@"#068bf4"];//导航栏颜色
     self.navigationController.navigationBar.tintColor = [Common hexStringToColor:@"#ffffff"];//返回键颜色
     self.navigationController.navigationBar.contentMode = UIViewContentModeScaleAspectFit;
-
-    
-    
     
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self createTableView];
+
 }
 
 -(void)createTableView
@@ -47,12 +46,14 @@
     _tableShowView.dataSource = self;
     [_tableShowView registerNib:[UINib nibWithNibName:@"CarBuyListCell" bundle:nil] forCellReuseIdentifier:@"CarBuyListCell"];
     
+    
 }
 
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     tableView.tintColor = [UIColor redColor];
+    JFcustomHeadView *view = [[JFcustomHeadView alloc] init];
     
-    return nil;
+    return view;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -62,17 +63,34 @@
     return 45;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    if (section == 0) {
+        return 1;
+    }
+   else if (section == 1) {
+        return 2;
+    }
+   else if (section == 2) {
+        return 3;
+    }else{
+         return 0;
+    }
 }
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 90;
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *ID = @"CarBuyListCell";
     CarBuyListCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        NSLog(@"1111");
+    }
+    
+}
 
 
 
