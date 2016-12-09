@@ -10,9 +10,10 @@
 #import "CarBuyListCell.h"
 #import "JFcustomHeadView.h"
 
-@interface CarBuyViewController ()<UITableViewDelegate,UITableViewDataSource,CarBuyListCellDelegate>
+@interface CarBuyViewController ()<UITableViewDelegate,UITableViewDataSource,CarBuyListCellDelegate,JFcustomHeadViewDelegate>
 {
-//    JFcustomHeadView *jfheadView;
+    JFcustomHeadView *jfheadView;
+    CarBuyListCell *cell;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableShowView;
 @property (weak, nonatomic) IBOutlet UIButton *buyBtn;//结算按钮
@@ -42,29 +43,39 @@
     [self createTableView];
 }
 
+
 -(void)createTableView
 {
     _tableShowView.delegate = self;
     _tableShowView.dataSource = self;
     _tableShowView.backgroundColor = [Common hexStringToColor:@"ECEBF5"];
     [_tableShowView registerNib:[UINib nibWithNibName:@"CarBuyListCell" bundle:nil] forCellReuseIdentifier:@"CarBuyListCell"];
+    
 }
+#pragma mark - tableviewDelegate
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    if (section == 0) {
-        JFcustomHeadView *jfheadView = [JFcustomHeadView viewWithTitlaName:@"百步商城"];
-        return jfheadView;
+    static NSString *IDD = @"dddd";
+    UITableViewHeaderFooterView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:IDD];
+    if (!view) {
+        view = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:IDD];
+        if (section == 0) {
+            jfheadView = [JFcustomHeadView viewWithTitlaName:@"百步商城"];
+            jfheadView.delegate = self;
+            [view addSubview:jfheadView];
+        }
+        else if (section == 1) {
+            jfheadView = [JFcustomHeadView viewWithTitlaName:@"淘五金商城"];
+            jfheadView.delegate = self;
+            [view addSubview:jfheadView];
+        }
+        else if (section == 2) {
+            jfheadView = [JFcustomHeadView viewWithTitlaName:@"我的商城"];
+            jfheadView.delegate = self;
+            [view addSubview:jfheadView];
+        }
+      
     }
-   else if (section == 1) {
-        JFcustomHeadView *jfheadView = [JFcustomHeadView viewWithTitlaName:@"淘五金商城"];
-        return jfheadView;
-    }
-   else if (section == 2) {
-        JFcustomHeadView *jfheadView = [JFcustomHeadView viewWithTitlaName:@"我的商城"];
-        return jfheadView;
-    }
-   else{
-       return nil;
-   }
+      return view;
 }
 
 -(UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
@@ -83,16 +94,15 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0) {
-        return 1;
+        return 5;
     }
    else if (section == 1) {
-        return 2;
+        return 3;
     }
    else if (section == 2) {
         return 3;
-    }else{
-         return 0;
     }
+         return 0;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -100,19 +110,16 @@
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *ID = @"CarBuyListCell";
-    CarBuyListCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    cell = [tableView dequeueReusableCellWithIdentifier:ID];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.path = indexPath;
     cell.delegate = self;
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 0) {
-        NSLog(@"1111");
-    }
-    
 }
-
--(void)chooseBtnClickDelegate:(UIButton *)btn{
+#pragma mark - CarBuyListDelete
+-(void)chooseBtnClickDelegate:(UIButton *)btn index:(NSIndexPath *)indexPath{
     btn.selected = !btn.selected;
 }
 -(void)jianBtnClickDelegate{
@@ -122,6 +129,10 @@
     NSLog(@"lalalal ++++");
 }
 
+#pragma mark - JFcustomHeadviewDelegate
+-(void)JFcustomHeadViewChooseBtnClick:(UIButton *)btn{
+    btn.selected = !btn.selected;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

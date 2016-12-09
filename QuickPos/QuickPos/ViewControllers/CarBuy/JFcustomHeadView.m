@@ -9,18 +9,28 @@
 #import "JFcustomHeadView.h"
 @interface JFcustomHeadView(){
     NSString *nameTitle;
+    
 }
 @end
 
 @implementation JFcustomHeadView
 
-+(instancetype)viewWithTitlaName:(NSString*)name{
+//选择
+- (IBAction)chooseBtnClick:(id)sender {
+    if ([_delegate respondsToSelector:@selector(JFcustomHeadViewChooseBtnClick:)]) {
+        [_delegate JFcustomHeadViewChooseBtnClick:sender];
+    }
+}
+
++(void)titlename:(NSString*)titleName{
     
+}
+
++(instancetype)viewWithTitlaName:(NSString*)name{
     NSArray *arr = [[NSBundle mainBundle] loadNibNamed:@"JFcustomHeadView" owner:self options:nil];
     JFcustomHeadView *jfView = [arr lastObject];
     jfView.mallName = name;
     return jfView;
-    
 }
 
 -(void)setMallName:(NSString *)mallName{

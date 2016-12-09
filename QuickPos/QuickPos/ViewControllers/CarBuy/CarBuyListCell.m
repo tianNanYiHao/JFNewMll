@@ -23,8 +23,8 @@
 
 //选中
 - (IBAction)chooseBtn:(id)sender {
-    if ([_delegate respondsToSelector:@selector(chooseBtnClickDelegate:)]) {
-        [_delegate chooseBtnClickDelegate:sender];
+    if ([_delegate respondsToSelector:@selector(chooseBtnClickDelegate: index:)]) {
+        [_delegate chooseBtnClickDelegate:sender index:_path];
     }
     
 }
@@ -48,7 +48,13 @@
 }
 
 
-
+- (void)layoutSubviews{
+    if (_isSelected) {
+        _chooseBtn.selected = !_chooseBtn.selected;
+    }
+    
+    
+}
 
 
 

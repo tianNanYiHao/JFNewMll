@@ -22,6 +22,9 @@
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" image="Circular_unselected"/>
                             <state key="selected" image="Circular_selected"/>
+                            <connections>
+                                <action selector="chooseBtnClick:" destination="PMy-tv-GMa" eventType="touchUpInside" id="IIl-qr-Udp"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店铺名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH3-ok-lWr">
                             <constraints>

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @protocol CarBuyListCellDelegate<NSObject>
--(void)chooseBtnClickDelegate:(UIButton*)btn;
+-(void)chooseBtnClickDelegate:(UIButton*)btn index:(NSIndexPath*)indexPath;
 -(void)jianBtnClickDelegate;
 -(void)jiaBtnClickDelegate;
 
@@ -23,9 +23,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *jianBtn; //-
 @property (weak, nonatomic) IBOutlet UILabel *countLab; //数量
 @property (weak, nonatomic) IBOutlet UIButton *jiaBtn; //+
-
+@property (nonatomic,assign) NSIndexPath *path;
 @property (nonatomic,assign) id<CarBuyListCellDelegate> delegate;
-
+@property (nonatomic,assign) BOOL isSelected;
 
 
 @end
