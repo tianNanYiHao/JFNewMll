@@ -50,24 +50,21 @@
     [_tableShowView registerNib:[UINib nibWithNibName:@"CarBuyListCell" bundle:nil] forCellReuseIdentifier:@"CarBuyListCell"];
 }
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-//    if (section == 0) {
-//     JFcustomHeadView *jfheadView = [[JFcustomHeadView alloc] initWithFrame:CGRectZero] ;
-//        jfheadView.mallName = @"百步生活1";
-//        return jfheadView;
-//    }else if (section == 1){
-//        JFcustomHeadView *jfheadView = [[JFcustomHeadView alloc] initWithFrame:CGRectZero];
-//        jfheadView.mallName = @"百步生活2";
-//        return jfheadView;
-//    }else if (section ==2 ){
-//        JFcustomHeadView *jfheadView = [[JFcustomHeadView alloc] initWithFrame:CGRectZero];
-//        jfheadView.mallName = @"百步生活3";
-//        return jfheadView;
-//    }else {
-//        return nil;
-//    }
-    
-    JFcustomHeadView *jfheadView = [[JFcustomHeadView alloc] initWithFrame:CGRectZero titleName:@"百步生活"];
-    return jfheadView;
+    if (section == 0) {
+        JFcustomHeadView *jfheadView = [JFcustomHeadView viewWithTitlaName:@"百步商城"];
+        return jfheadView;
+    }
+   else if (section == 1) {
+        JFcustomHeadView *jfheadView = [JFcustomHeadView viewWithTitlaName:@"淘五金商城"];
+        return jfheadView;
+    }
+   else if (section == 2) {
+        JFcustomHeadView *jfheadView = [JFcustomHeadView viewWithTitlaName:@"我的商城"];
+        return jfheadView;
+    }
+   else{
+       return nil;
+   }
 }
 
 -(UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{

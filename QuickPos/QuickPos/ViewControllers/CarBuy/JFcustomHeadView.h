@@ -15,5 +15,9 @@
 
 @property (nonatomic,strong)    NSString * mallName;
 
-- (instancetype)initWithFrame:(CGRect)frame titleName:(NSString*)name;
+//- (instancetype)initWithFrame:(CGRect)frame titleName:(NSString*)name;
++(instancetype)viewWithTitlaName:(NSString*)name;
+
+
+
 @end
