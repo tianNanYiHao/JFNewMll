@@ -10,7 +10,7 @@
 #import "CarBuyListCell.h"
 #import "JFcustomHeadView.h"
 
-@interface CarBuyViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface CarBuyViewController ()<UITableViewDelegate,UITableViewDataSource,CarBuyListCellDelegate>
 {
 //    JFcustomHeadView *jfheadView;
 }
@@ -105,6 +105,7 @@
     static NSString *ID = @"CarBuyListCell";
     CarBuyListCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.delegate = self;
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -114,6 +115,15 @@
     
 }
 
+-(void)chooseBtnClickDelegate:(UIButton *)btn{
+    btn.selected = !btn.selected;
+}
+-(void)jianBtnClickDelegate{
+    NSLog(@"lalallal -------");
+}
+-(void)jiaBtnClickDelegate{
+    NSLog(@"lalalal ++++");
+}
 
 
 - (void)didReceiveMemoryWarning {

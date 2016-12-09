@@ -43,13 +43,9 @@
     _bgView.backgroundColor = [UIColor whiteColor];
 
 }
-//- (void)setMallName:(NSString *)mallName{
-//    _mallName = mallName;
-//}
-
 -(void)awakeFromNib{
     [super awakeFromNib];
-    _mallNameLab.text = nameTitle;
+    _mallNameLab.text = @"123";
 }
 
 /*

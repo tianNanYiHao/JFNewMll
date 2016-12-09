@@ -7,13 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol CarBuyListCellDelegate<NSObject>
+-(void)chooseBtnClickDelegate:(UIButton*)btn;
+-(void)jianBtnClickDelegate;
+-(void)jiaBtnClickDelegate;
+
+@end
 
 @interface CarBuyListCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIButton *chooseBtn;//选择按钮
 @property (weak, nonatomic) IBOutlet UIImageView *imageIcon;//图片
 @property (weak, nonatomic) IBOutlet UILabel *titleLab;//标题lab
 @property (weak, nonatomic) IBOutlet UILabel *moneyLab;//价格lab
-@property (weak, nonatomic) IBOutlet UILabel *countLab;//数量lab
+
+@property (weak, nonatomic) IBOutlet UIButton *jianBtn; //-
+@property (weak, nonatomic) IBOutlet UILabel *countLab; //数量
+@property (weak, nonatomic) IBOutlet UIButton *jiaBtn; //+
+
+@property (nonatomic,assign) id<CarBuyListCellDelegate> delegate;
 
 
 
