@@ -88,6 +88,7 @@
 		33F398761DCC771D0000520C /* ImessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F398711DCC771D0000520C /* ImessageDetailViewController.m */; };
 		33F398771DCC771D0000520C /* MyImessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F398731DCC771D0000520C /* MyImessageTableViewCell.m */; };
 		33F398781DCC771D0000520C /* MyImessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F398751DCC771D0000520C /* MyImessageViewController.m */; };
+		33F51DE91DFE9950008077E9 /* ShopFooterReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F51DE81DFE9950008077E9 /* ShopFooterReusableView.m */; };
 		33FBC8601D9B6CFE00986D9A /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FBC85F1D9B6CFE00986D9A /* Common.m */; };
 		33FDAE5F1D66F13D00AACC61 /* AddCreditCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FDAE5A1D66F13D00AACC61 /* AddCreditCardViewController.m */; };
 		33FDAE601D66F13D00AACC61 /* CreditCardPayDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FDAE5C1D66F13D00AACC61 /* CreditCardPayDetailViewController.m */; };
@@ -915,6 +916,8 @@
 		33F398731DCC771D0000520C /* MyImessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyImessageTableViewCell.m; sourceTree = "<group>"; };
 		33F398741DCC771D0000520C /* MyImessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyImessageViewController.h; sourceTree = "<group>"; };
 		33F398751DCC771D0000520C /* MyImessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyImessageViewController.m; sourceTree = "<group>"; };
+		33F51DE71DFE9950008077E9 /* ShopFooterReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopFooterReusableView.h; sourceTree = "<group>"; };
+		33F51DE81DFE9950008077E9 /* ShopFooterReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopFooterReusableView.m; sourceTree = "<group>"; };
 		33FBC85E1D9B6CFE00986D9A /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		33FBC85F1D9B6CFE00986D9A /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		33FDAE591D66F13D00AACC61 /* AddCreditCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCreditCardViewController.h; sourceTree = "<group>"; };
@@ -2773,6 +2776,13 @@
 			path = CreditCardRepayment;
 			sourceTree = "<group>";
 		};
+		33FEADC11DFA8EF5002BAF6D /* ShippingAddress */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShippingAddress;
+			sourceTree = "<group>";
+		};
 		591BBFC21AEDFE320037199A /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
@@ -3242,6 +3252,7 @@
 		591BC20F1AEDFE6A0037199A /* MyAccount */ = {
 			isa = PBXGroup;
 			children = (
+				33FEADC11DFA8EF5002BAF6D /* ShippingAddress */,
 				3357637A1DF8FCBA00CC56E7 /* MyAccountViewController.h */,
 				3357637B1DF8FCBA00CC56E7 /* MyAccountViewController.m */,
 				591BC2341AEDFE6A0037199A /* MyAccountTableViewCell.h */,
@@ -3321,6 +3332,8 @@
 				BF40F96A1DFE9068007B8433 /* JFAddMyShopProductViewController.h */,
 				BF40F96B1DFE9068007B8433 /* JFAddMyShopProductViewController.m */,
 				BF40F96C1DFE9068007B8433 /* JFAddMyShopProductViewController.xib */,
+				33F51DE71DFE9950008077E9 /* ShopFooterReusableView.h */,
+				33F51DE81DFE9950008077E9 /* ShopFooterReusableView.m */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -5810,6 +5823,7 @@
 				BF3C90391D5834A50092AC19 /* ZXPDF417ResultMetadata.m in Sources */,
 				D561521A1BDF6EA100DAAADC /* UIScrollView+MJExtension.m in Sources */,
 				BFC0421D1D70120A0090CAFC /* AFNetworkActivityIndicatorManager.m in Sources */,
+				33F51DE91DFE9950008077E9 /* ShopFooterReusableView.m in Sources */,
 				325CBCE51AEE1BC400D924D5 /* ME11Controller.m in Sources */,
 				591BC37B1AEDFE6A0037199A /* MessageBarManager.m in Sources */,
 				BF3C8F841D5834A50092AC19 /* ZXAztecDetectorResult.m in Sources */,
