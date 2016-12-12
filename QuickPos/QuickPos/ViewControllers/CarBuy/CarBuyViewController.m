@@ -9,12 +9,17 @@
 #import "CarBuyViewController.h"
 #import "CarBuyListCell.h"
 #import "JFcustomHeadView.h"
+#import "JFShopCarModel.h"
 
 @interface CarBuyViewController ()<UITableViewDelegate,UITableViewDataSource,CarBuyListCellDelegate,JFcustomHeadViewDelegate>
 {
     JFcustomHeadView *jfheadView;
     CarBuyListCell *cell;
+    
 }
+@property (nonatomic,strong) NSMutableArray *arrSection;
+@property (nonatomic,strong) JFShopCarModel *model;
+
 @property (weak, nonatomic) IBOutlet UITableView *tableShowView;
 @property (weak, nonatomic) IBOutlet UIButton *buyBtn;//结算按钮
 @property (weak, nonatomic) IBOutlet UILabel *moneyShowLab;//金额Lab
@@ -22,8 +27,25 @@
 @end
 
 @implementation CarBuyViewController
+/**
+ 店铺名称数组
+ */
+-(NSMutableArray*)arrSection{
+    if (!_arrSection) {
+        _arrSection = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _arrSection;
+}
+-(JFShopCarModel *)model{
+    if (!_model) {
+        _model = [[JFShopCarModel alloc] init];
+    }
+    return _model;
+}
+
+
 //结算点击事件
-- (IBAction)buyBtnClick:(id)sender {
+- (IBAction)buyBtnClick:(UIButton*)sender {
     
 }
 
@@ -40,9 +62,17 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self setModel];
     [self createTableView];
 }
 
+-(void)setModel{
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"shoppingCar" ofType:@"plist"];
+    NSArray *arr = [[NSArray alloc] initWithContentsOfFile:path];
+    self.arrSection = (NSMutableArray*)arr;
+    
+}
 
 -(void)createTableView
 {
@@ -84,7 +114,7 @@
     return bgView;
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 3;
+    return self.arrSection.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 40;
@@ -93,16 +123,16 @@
     return 15;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (section == 0) {
-        return 5;
-    }
-   else if (section == 1) {
-        return 3;
-    }
-   else if (section == 2) {
-        return 3;
-    }
-         return 0;
+//    if (section == 0) {
+//        return [self.arrSection[0] count];
+//    }
+//   else if (section == 1) {
+//        return [self.arrSection[1] count];
+//    }
+//   else if (section == 2) {
+//        return [self.arrSection[2] count];
+//    }
+         return [_arrSection[section] count];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -112,15 +142,16 @@
     static NSString *ID = @"CarBuyListCell";
     cell = [tableView dequeueReusableCellWithIdentifier:ID];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.path = indexPath;
+    NSArray *arr = self.arrSection[indexPath.section];
+    self.model = arr[indexPath.row];
     cell.delegate = self;
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 }
 #pragma mark - CarBuyListDelete
--(void)chooseBtnClickDelegate:(UIButton *)btn index:(NSIndexPath *)indexPath{
-    btn.selected = !btn.selected;
+-(void)chooseBtnClickDelegate:(UIButton *)btn model:(JFShopCarModel *)model{
+
 }
 -(void)jianBtnClickDelegate{
     NSLog(@"lalallal -------");
@@ -139,14 +170,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

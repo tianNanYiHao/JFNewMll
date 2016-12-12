@@ -7,6 +7,7 @@
 //
 
 #import "CarBuyListCell.h"
+#import "JFShopCarModel.h"
 
 @implementation CarBuyListCell
 
@@ -22,9 +23,10 @@
 }
 
 //选中
-- (IBAction)chooseBtn:(id)sender {
-    if ([_delegate respondsToSelector:@selector(chooseBtnClickDelegate: index:)]) {
-        [_delegate chooseBtnClickDelegate:sender index:_path];
+- (IBAction)chooseBtn:(UIButton*)sender {
+    CarBuyListCell *cell = (CarBuyListCell*)sender.superview.superview;
+    if ([_delegate respondsToSelector:@selector(chooseBtnClickDelegate: model:)]) {
+        [_delegate chooseBtnClickDelegate:sender model:cell.model];
     }
     
 }
@@ -47,15 +49,11 @@
     
 }
 
-
-- (void)layoutSubviews{
-    if (_isSelected) {
-        _chooseBtn.selected = !_chooseBtn.selected;
-    }
-    
+- (void)setModel:(JFShopCarModel *)model{
+    _model = model;
+    _chooseBtn.selected = model.isSelected;
     
 }
-
 
 
 @end

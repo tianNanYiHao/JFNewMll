@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class JFShopCarModel;
+
 @protocol CarBuyListCellDelegate<NSObject>
--(void)chooseBtnClickDelegate:(UIButton*)btn index:(NSIndexPath*)indexPath;
+-(void)chooseBtnClickDelegate:(UIButton*)btn model:(JFShopCarModel*)model;
 -(void)jianBtnClickDelegate;
 -(void)jiaBtnClickDelegate;
 
@@ -23,9 +25,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *jianBtn; //-
 @property (weak, nonatomic) IBOutlet UILabel *countLab; //数量
 @property (weak, nonatomic) IBOutlet UIButton *jiaBtn; //+
-@property (nonatomic,assign) NSIndexPath *path;
+
 @property (nonatomic,assign) id<CarBuyListCellDelegate> delegate;
-@property (nonatomic,assign) BOOL isSelected;
+@property (nonatomic,strong) JFShopCarModel *model;
+
+
 
 
 @end
