@@ -9,48 +9,68 @@
 #import "JFcustomHeadView.h"
 @interface JFcustomHeadView(){
     NSString *nameTitle;
+    
 }
 @end
 
 @implementation JFcustomHeadView
 
-
-- (instancetype)initWithFrame:(CGRect)frame titleName:(NSString*)name{
-    self = [super initWithFrame:frame];
-    if (self) {
-        nameTitle = name;
-        [self baseInit];
+//选择
+- (IBAction)chooseBtnClick:(id)sender {
+    if ([_delegate respondsToSelector:@selector(JFcustomHeadViewChooseBtnClick:)]) {
+        [_delegate JFcustomHeadViewChooseBtnClick:sender];
     }
-    return self;
 }
 
--(void)baseInit{
++(void)titlename:(NSString*)titleName{
+    
+}
+
++(instancetype)viewWithTitlaName:(NSString*)name{
     NSArray *arr = [[NSBundle mainBundle] loadNibNamed:@"JFcustomHeadView" owner:self options:nil];
-    UIView *view = nil;
-    for (id obj in arr) {
-        if ([obj isKindOfClass:[UIView class]]) {
-            view = obj;
-            break;
-        }
-    }
-    if (view != nil) {
-        [self addSubview:view];
-    }
+    JFcustomHeadView *jfView = [arr lastObject];
+    jfView.mallName = name;
+    return jfView;
 }
+
+-(void)setMallName:(NSString *)mallName{
+    _mallName = mallName;
+    _mallNameLab.text = _mallName;
+    
+}
+
+//- (instancetype)initWithFrame:(CGRect)frame titleName:(NSString*)name{
+//    self = [super initWithFrame:frame];
+//    if (self) {
+//        nameTitle = name;
+//        [self baseInit];
+//    }
+//    return self;
+//}
+
+//-(void)baseInit{
+//    NSArray *arr = [[NSBundle mainBundle] loadNibNamed:@"JFcustomHeadView" owner:self options:nil];
+//    UIView *view = nil;
+//    for (id obj in arr) {
+//        if ([obj isKindOfClass:[UIView class]]) {
+//            view = obj;
+//            break;
+//        }
+//    }
+//    if (view != nil) {
+//        [self addSubview:view];
+//    }
+//}
 - (void)layoutSubviews{
     self.frame = CGRectMake(0,0, NEWWIDTH, 40);
     self.backgroundColor = [UIColor whiteColor];
     _bgView.backgroundColor = [UIColor whiteColor];
 
 }
-//- (void)setMallName:(NSString *)mallName{
-//    _mallName = mallName;
+//-(void)awakeFromNib{
+//    [super awakeFromNib];
+//    _mallNameLab.text = nameTitle;
 //}
-
--(void)awakeFromNib{
-    [super awakeFromNib];
-    _mallNameLab.text = nameTitle;
-}
 
 /*
 // Only override drawRect: if you perform custom drawing.

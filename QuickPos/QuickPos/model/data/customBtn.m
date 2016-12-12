@@ -13,11 +13,11 @@
 
 -(void)layoutSubviews{
 
-    
     self.imageView.frame = CGRectMake(0, 0, self.bounds.size.width/2, self.bounds.size.height-20);
     self.titleLabel.frame = CGRectMake(0, self.bounds.size.height-20,  self.bounds.size.width, 20);
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
 }
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
