@@ -327,7 +327,6 @@
         return 1;
     }
 
-    
     return 1;
 }
 
@@ -350,6 +349,7 @@
     
 }
 
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if(indexPath.section == 0){
@@ -359,10 +359,10 @@
     }
     
     if(indexPath.section == 1 && indexPath.row == 1){
-        
-        return 44;
-    }
     
+        return 44;
+        
+    }
     return 44;
 }
 
@@ -460,6 +460,13 @@
     
 }
 
+//店铺管理
+
+
+- (IBAction)shopManagement:(UIButton *)sender {
+}
+
+
 //UIalert... 代理
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
@@ -467,13 +474,6 @@
         [[QuickPosTabBarController getQuickPosTabBarController] gotoLoginViewCtrl];
     }
 }
-
-- (IBAction)ShopManagement:(id)sender {
-
-
-}
-
-
 
 //设置footerView
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{

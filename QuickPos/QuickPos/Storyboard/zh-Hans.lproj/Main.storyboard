@@ -1068,12 +1068,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8yf-JZ-wTD">
-                                <frame key="frameInset" maxY="69"/>
+                                <frame key="frameInset" minX="-0.5" maxX="0.5" maxY="69"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <view contentMode="scaleToFill" misplaced="YES" id="VJ7-0v-Ppk">
-                                <frame key="frameInset" minY="406" width="100.00%" height="102.04%"/>
+                                <frame key="frameInset" minX="-0.5" minY="406" width="99.84%" height="104.08%"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="合计:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XiX-Hk-2TY">
@@ -1091,7 +1091,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7eu-7i-8Gg">
-                                        <frame key="frameInset" width="100" height="51" maxX="1"/>
+                                        <frame key="frameInset" width="100.5" height="51" maxX="1"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.089856537080000007" green="0.72731920809999995" blue="0.26498380890000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="结  算">
@@ -4797,7 +4797,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="aur-ut-heV" customClass="UserInfoView">
-                                <frame key="frameInset" minX="8" minY="7" height="65" maxX="8"/>
+                                <frame key="frameInset" minX="8" minY="7" height="65" maxX="8.5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="o2O-z1-g1r">
@@ -4827,7 +4827,7 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tAv-yI-h5b">
-                                <frame key="frameInset" minX="8" minY="309" height="45" maxX="8"/>
+                                <frame key="frameInset" minX="8" minY="309" height="45" maxX="8.5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.34919726848602295" green="0.75746613740921021" blue="0.39555364847183228" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="确认支付">
@@ -4839,7 +4839,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="FEH-eK-YR2">
-                                <frame key="frameInset" minX="8" minY="86" height="179" maxX="8"/>
+                                <frame key="frameInset" minX="8" minY="86" height="179" maxX="8.5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="订单编号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eaQ-vn-cNc">
@@ -4871,28 +4871,28 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sOf-fe-bKf">
-                                        <frame key="frameInset" minY="25" width="70.28%" height="21" maxX="13"/>
+                                        <frame key="frameInset" minY="25" width="70.57%" height="21" maxX="13"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.24983558058738708" green="0.25857910513877869" blue="0.31078270077705383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lCH-9H-zYX">
-                                        <frame key="frameInset" minY="97" width="70.28%" height="21" maxX="13"/>
+                                        <frame key="frameInset" minY="97" width="70.57%" height="21" maxX="13"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.24983558058738708" green="0.25857910513877869" blue="0.31078270077705383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ofa-7j-RBh">
-                                        <frame key="frameInset" minY="137" width="70.28%" height="21" maxX="13"/>
+                                        <frame key="frameInset" minY="137" width="70.57%" height="21" maxX="13"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.24983558058738708" green="0.25857910513877869" blue="0.31078270077705383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xI6-tN-Ubp">
-                                        <frame key="frameInset" minY="61" width="70.28%" height="21" maxX="13"/>
+                                        <frame key="frameInset" minY="61" width="70.57%" height="21" maxX="13"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.24983558058738708" green="0.25857910513877869" blue="0.31078270077705383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -4902,7 +4902,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="qmU-Fx-Inn">
-                                <frame key="frameInset" minX="8" minY="261" height="40" maxX="8"/>
+                                <frame key="frameInset" minX="8" minY="261" height="40" maxX="8.5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="数字验证码" minimumFontSize="17" id="drS-Uc-qvZ">
@@ -4932,7 +4932,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="TkC-63-8Gw">
-                                <frame key="frameInset" minX="8" minY="7" height="689" maxX="8"/>
+                                <frame key="frameInset" minX="8" minY="7" height="689" maxX="8.5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请刷卡，如未响应，请重新插入刷卡器." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m2t-j4-cYP">
@@ -8431,8 +8431,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="OutAct:" destination="6L9-KT-rdg" eventType="touchUpInside" id="dH8-Lk-Vyh"/>
-                                            <action selector="ShopManagement:" destination="6L9-KT-rdg" eventType="touchUpInside" id="rM2-KV-QNd"/>
+                                            <action selector="shopManagement:" destination="6L9-KT-rdg" eventType="touchUpInside" id="Qhb-Hh-hns"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1pr-IL-ns5">
@@ -8489,8 +8488,8 @@
                                             <frame key="frameInset" width="320" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t5O-o5-HLE">
-                                                    <frame key="frameInset" minX="46" minY="6" width="251" height="31"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t5O-o5-HLE">
+                                                    <frame key="frameInset" minX="10" minY="6" width="251" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.28235294119999998" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -8538,7 +8537,6 @@
                         <outlet property="OutFootView" destination="SCz-Bb-5Oj" id="AK0-r8-HVQ"/>
                         <outlet property="ShopManagement" destination="QtU-SL-q7E" id="Fb8-aY-zfE"/>
                         <outlet property="myAccountTableView" destination="ekp-GO-yN1" id="9Bl-Fl-nzM"/>
-                        <outlet property="tuichu" destination="QtU-SL-q7E" id="0N0-ut-LXJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZx-1u-xEn" userLabel="First Responder" sceneMemberID="firstResponder"/>

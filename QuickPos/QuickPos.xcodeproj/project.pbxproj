@@ -2758,6 +2758,13 @@
 			path = CreditCardRepayment;
 			sourceTree = "<group>";
 		};
+		33FEADC11DFA8EF5002BAF6D /* ShippingAddress */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShippingAddress;
+			sourceTree = "<group>";
+		};
 		591BBFC21AEDFE320037199A /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
@@ -3227,6 +3234,7 @@
 		591BC20F1AEDFE6A0037199A /* MyAccount */ = {
 			isa = PBXGroup;
 			children = (
+				33FEADC11DFA8EF5002BAF6D /* ShippingAddress */,
 				3357637A1DF8FCBA00CC56E7 /* MyAccountViewController.h */,
 				3357637B1DF8FCBA00CC56E7 /* MyAccountViewController.m */,
 				591BC2341AEDFE6A0037199A /* MyAccountTableViewCell.h */,
