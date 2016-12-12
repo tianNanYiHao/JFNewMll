@@ -610,6 +610,12 @@
 		BF3E101A1D4A0206003F0F89 /* ProducyListSYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3E10191D4A0206003F0F89 /* ProducyListSYModel.m */; };
 		BF3F32C11D4B1BB100D4A96E /* CompaneyProductInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3F32BF1D4B1BB100D4A96E /* CompaneyProductInfoController.m */; };
 		BF3F32C21D4B1BB100D4A96E /* CompaneyProductInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF3F32C01D4B1BB100D4A96E /* CompaneyProductInfoController.xib */; };
+		BF40F9601DFE3B04007B8433 /* JFShopCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF40F95F1DFE3B04007B8433 /* JFShopCarModel.m */; };
+		BF40F9621DFE467F007B8433 /* shoppingCar.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF40F9611DFE467F007B8433 /* shoppingCar.plist */; };
+		BF40F9661DFE5634007B8433 /* CarBuyHeadListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF40F9641DFE5634007B8433 /* CarBuyHeadListCell.m */; };
+		BF40F9671DFE5635007B8433 /* CarBuyHeadListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF40F9651DFE5634007B8433 /* CarBuyHeadListCell.xib */; };
+		BF40F96D1DFE9068007B8433 /* JFAddMyShopProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF40F96B1DFE9068007B8433 /* JFAddMyShopProductViewController.m */; };
+		BF40F96E1DFE9068007B8433 /* JFAddMyShopProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF40F96C1DFE9068007B8433 /* JFAddMyShopProductViewController.xib */; };
 		BF43A9231D825C6800C9E722 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF43A9221D825C6800C9E722 /* AppDelegate.m */; };
 		BF43A9251D825C9700C9E722 /* jpush-ios-2.1.9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF43A9241D825C9700C9E722 /* jpush-ios-2.1.9.a */; };
 		BF4EA7791D7D3F7800E8B95D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4EA7781D7D3F7700E8B95D /* CoreFoundation.framework */; };
@@ -1918,6 +1924,15 @@
 		BF3F32BE1D4B1BB100D4A96E /* CompaneyProductInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompaneyProductInfoController.h; sourceTree = "<group>"; };
 		BF3F32BF1D4B1BB100D4A96E /* CompaneyProductInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompaneyProductInfoController.m; sourceTree = "<group>"; };
 		BF3F32C01D4B1BB100D4A96E /* CompaneyProductInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompaneyProductInfoController.xib; sourceTree = "<group>"; };
+		BF40F95E1DFE3B04007B8433 /* JFShopCarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFShopCarModel.h; sourceTree = "<group>"; };
+		BF40F95F1DFE3B04007B8433 /* JFShopCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFShopCarModel.m; sourceTree = "<group>"; };
+		BF40F9611DFE467F007B8433 /* shoppingCar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = shoppingCar.plist; sourceTree = "<group>"; };
+		BF40F9631DFE5634007B8433 /* CarBuyHeadListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarBuyHeadListCell.h; sourceTree = "<group>"; };
+		BF40F9641DFE5634007B8433 /* CarBuyHeadListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarBuyHeadListCell.m; sourceTree = "<group>"; };
+		BF40F9651DFE5634007B8433 /* CarBuyHeadListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarBuyHeadListCell.xib; sourceTree = "<group>"; };
+		BF40F96A1DFE9068007B8433 /* JFAddMyShopProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFAddMyShopProductViewController.h; sourceTree = "<group>"; };
+		BF40F96B1DFE9068007B8433 /* JFAddMyShopProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFAddMyShopProductViewController.m; sourceTree = "<group>"; };
+		BF40F96C1DFE9068007B8433 /* JFAddMyShopProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFAddMyShopProductViewController.xib; sourceTree = "<group>"; };
 		BF43A9221D825C6800C9E722 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BF43A9241D825C9700C9E722 /* jpush-ios-2.1.9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-2.1.9.a"; sourceTree = "<group>"; };
 		BF4EA7781D7D3F7700E8B95D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -3303,6 +3318,9 @@
 				87EAAF641C05A20D006CD886 /* TransferAccountViewController.m */,
 				333CC04D1D2BB47700023EA3 /* DetailOriginOfGoodsViewController.h */,
 				333CC04E1D2BB47700023EA3 /* DetailOriginOfGoodsViewController.m */,
+				BF40F96A1DFE9068007B8433 /* JFAddMyShopProductViewController.h */,
+				BF40F96B1DFE9068007B8433 /* JFAddMyShopProductViewController.m */,
+				BF40F96C1DFE9068007B8433 /* JFAddMyShopProductViewController.xib */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -4846,17 +4864,23 @@
 		BFEE69FB1DF7F174003A01C3 /* CarBuy */ = {
 			isa = PBXGroup;
 			children = (
+				BF40F9611DFE467F007B8433 /* shoppingCar.plist */,
 				BFEE69FC1DF7F1A2003A01C3 /* CarBuyViewController.h */,
 				BFEE69FD1DF7F1A2003A01C3 /* CarBuyViewController.m */,
 				BFEE6A0E1DF8042D003A01C3 /* CarBuyListCell.h */,
 				BFEE6A0F1DF8042D003A01C3 /* CarBuyListCell.m */,
 				BFEE6A101DF8042D003A01C3 /* CarBuyListCell.xib */,
+				BF40F9631DFE5634007B8433 /* CarBuyHeadListCell.h */,
+				BF40F9641DFE5634007B8433 /* CarBuyHeadListCell.m */,
+				BF40F9651DFE5634007B8433 /* CarBuyHeadListCell.xib */,
 				BFBA832E1DF9127D00DF99F8 /* JFcustomHeadView.h */,
 				BFBA832F1DF9127D00DF99F8 /* JFcustomHeadView.m */,
 				BFBA83331DF92B2900DF99F8 /* JFcustomHeadView.xib */,
 				BFEE6A091DF7FCCA003A01C3 /* CarBuyAddressListCell.h */,
 				BFEE6A0A1DF7FCCA003A01C3 /* CarBuyAddressListCell.m */,
 				BFEE6A0B1DF7FCCA003A01C3 /* CarBuyAddressListCell.xib */,
+				BF40F95E1DFE3B04007B8433 /* JFShopCarModel.h */,
+				BF40F95F1DFE3B04007B8433 /* JFShopCarModel.m */,
 			);
 			path = CarBuy;
 			sourceTree = "<group>";
@@ -5186,6 +5210,7 @@
 				3B47EDDE1B8CC30000A7289D /* ShopCartTableViewCell.xib in Resources */,
 				87E058DA1C044DBD00C4A4C1 /* Icon-40@3x.png in Resources */,
 				591BC3B41AEDFE6A0037199A /* SafeStringKeyBoard.xib in Resources */,
+				BF40F9671DFE5635007B8433 /* CarBuyHeadListCell.xib in Resources */,
 				87E058E41C044DBD00C4A4C1 /* Icon-Small.png in Resources */,
 				591BC37A1AEDFE6A0037199A /* IncomedataViewController.xib in Resources */,
 				BF581EBB1D4EF6790073A8F6 /* ComplaintViewController.xib in Resources */,
@@ -5245,6 +5270,7 @@
 				87E058DF1C044DBD00C4A4C1 /* Icon-72@2x.png in Resources */,
 				BF3C8F671D5834A50092AC19 /* LICENSE in Resources */,
 				D56152181BDF6EA100DAAADC /* MJRefresh.bundle in Resources */,
+				BF40F96E1DFE9068007B8433 /* JFAddMyShopProductViewController.xib in Resources */,
 				BF9DB2B51DD16CFD00516FF3 /* RuiMViewController.xib in Resources */,
 				BFEF24C81DAA388B00D61F0F /* TrickMainViewController.xib in Resources */,
 				87E058E91C044DBD00C4A4C1 /* iTunesArtwork in Resources */,
@@ -5255,6 +5281,7 @@
 				BFE2EC801DE68AD60054C011 /* JFFlowViewController.xib in Resources */,
 				AEE5F6241C4E19B1006FAF60 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				BF21CD5E1DB619A700963498 /* TrickPersonInfoCell.xib in Resources */,
+				BF40F9621DFE467F007B8433 /* shoppingCar.plist in Resources */,
 				339B9A531D7D68A6004D0E1B /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				87E058DE1C044DBD00C4A4C1 /* Icon-72.png in Resources */,
 				BFF5552D1DAB8DA200F110B7 /* TrickChooseCarListViewController.xib in Resources */,
@@ -5383,6 +5410,7 @@
 				D5B09C0C1BCE371C00AC4881 /* MyAccount2TableViewCell.m in Sources */,
 				BF3C8F9E1D5834A50092AC19 /* ZXSMTPResultParser.m in Sources */,
 				BF3C8FC71D5834A50092AC19 /* ZXDecodeHints.m in Sources */,
+				BF40F9601DFE3B04007B8433 /* JFShopCarModel.m in Sources */,
 				AE8EA43B1C5F698E00823760 /* NudgedViewController.m in Sources */,
 				AE8EA43A1C5F698E00823760 /* ForHelpViewController.m in Sources */,
 				591BC09B1AEDFE320037199A /* ACEDrawingView.m in Sources */,
@@ -5654,6 +5682,7 @@
 				BF3C8FF21D5834A50092AC19 /* ZXAI01AndOtherAIs.m in Sources */,
 				591BC3A11AEDFE6A0037199A /* MallViewController.m in Sources */,
 				87FA242F1BF1BE4900BA935B /* FMDatabase.m in Sources */,
+				BF40F96D1DFE9068007B8433 /* JFAddMyShopProductViewController.m in Sources */,
 				AE8EA4341C5F698E00823760 /* CertificationGoodsViewController.m in Sources */,
 				D56152131BDF6EA100DAAADC /* MJRefreshBackNormalFooter.m in Sources */,
 				591BC3991AEDFE6A0037199A /* ContractView.m in Sources */,
@@ -5801,6 +5830,7 @@
 				339DA4181D9920FD001BA189 /* CreditQuickPayOrderViewController.m in Sources */,
 				591BC35C1AEDFE6A0037199A /* NoteViewController.m in Sources */,
 				BF3C902D1D5834A50092AC19 /* ZXPDF417DetectionResultRowIndicatorColumn.m in Sources */,
+				BF40F9661DFE5634007B8433 /* CarBuyHeadListCell.m in Sources */,
 				BF21CD621DB61C5500963498 /* TrickOrderCell.m in Sources */,
 				BF3C900C1D5834A50092AC19 /* ZXCode39Reader.m in Sources */,
 				BF3C90021D5834A50092AC19 /* ZXAbstractRSSReader.m in Sources */,
