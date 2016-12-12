@@ -26,8 +26,12 @@
 #import "BoRefreshAutoStateFooter.h"
 #import "SDCycleScrollView.h"
 #import "DetailOriginOfGoodsViewController.h"
+#import "ShopFooterReusableView.h"
 
 #define tableCellHeight 30
+#define kHeaderReuseID @"headerView"
+#define kFooterReuseId @"footerView"
+
 
 @interface MallViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate,ResponseData,UISearchBarDelegate,getOrderTypeProtocol,UITableViewDataSource,UITableViewDelegate,getOrderTypeProtocol,SDCycleScrollViewDelegate>
 {
@@ -94,7 +98,7 @@
 
 }
 @property (weak, nonatomic) IBOutlet UIButton *editAction;
-@property (weak, nonatomic) IBOutlet UILabel *shopHint;                     //购物车计数label
+@property (weak, nonatomic) IBOutlet UILabel *shopHint; //购物车计数label
 @property (weak, nonatomic) IBOutlet UICollectionView *mallCollectionView;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *mallCollectionView1;//溯源商城和跨境电商中间跳转的collection
@@ -234,12 +238,15 @@
     self.mallCollectionView.tag = 60001;
     self.mallCollectionView1.tag = 60002;
     
+    
     self.mallCollectionView1.delegate = self;//新增加的collectionView
     self.mallCollectionView1.dataSource = self;//新增加的collectionView
     
     
     self.mallCollectionView.delegate = self;//原来的collectionView
     self.mallCollectionView.dataSource = self;//原来的collectionView
+
+     [self.mallCollectionView registerClass:[ShopFooterReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kFooterReuseId];
 
     self.table.delegate = self;
     self.table.dataSource = self;
@@ -1019,10 +1026,10 @@
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }
     //申请订单
-    
-    else if([[dict objectForKey:@"respCode"]isEqualToString:@"0000"]){
+    //(type == REQUSET_ORDER)
+    else if(type == REQUSET_ORDER){
         
-        if (type == REQUSET_ORDER) {
+        if([[dict objectForKey:@"respCode"]isEqualToString:@"0000"]) {
             UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             OrderViewController *shopVc = [self.storyboard instantiateViewControllerWithIdentifier:@"OrderViewController"];
             orderData = [[OrderData alloc]initWithData:dict];
@@ -1048,7 +1055,10 @@
             }
             
             [self.navigationController pushViewController:shopVc animated:YES];
-       
+            
+        }else
+        {
+            [Common showMsgBox:nil msg:dict[@"respDesc"] parentCtrl:self];
         }
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }
@@ -1151,6 +1161,7 @@
         else
         {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
+//            [Common showMsgBox:nil msg:dict[@"respDesc"] parentCtrl:self];
         }
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }
@@ -1382,6 +1393,58 @@
 //    return UIEdgeInsetsMake(5, 15, 15, 15);//上 左 下 右
     return UIEdgeInsetsMake(0, 0, 0, 0);
 }
+
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionReusableView *reusableview = nil;
+    
+    if (kind == UICollectionElementKindSectionHeader)
+    {
+        ShopFooterReusableView *foorerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kFooterReuseId forIndexPath:indexPath];
+        
+        if (indexPath.section == 0) {
+            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
+            view.backgroundColor = [Common hexStringToColor:@"#2196f3"];
+            
+            UIButton *scanBtn = [[UIButton alloc]initWithFrame:CGRectMake(60, 25, 48, 48)];
+            [scanBtn setImage:[UIImage imageNamed:@"code_pay"] forState:UIControlStateNormal];
+            
+            [scanBtn addTarget:self action:@selector(scanCode:) forControlEvents:UIControlEventTouchUpInside];
+            
+            UIButton *RechargeBtn = [[UIButton alloc]initWithFrame:CGRectMake(212, 25, 48, 48)];
+            [RechargeBtn setImage:[UIImage imageNamed:@"serve_payment"] forState:UIControlStateNormal];
+            [RechargeBtn addTarget:self action:@selector(Recharge:) forControlEvents:UIControlEventTouchUpInside];
+            
+            
+            UILabel *scanLabel = [[UILabel alloc]initWithFrame:CGRectMake(60, 75, 48, 20)];
+            scanLabel.text = @"扫一扫";
+            scanLabel.textColor = [Common hexStringToColor:@"#ffffff"];
+            scanLabel.font = [UIFont systemFontOfSize:12];
+            scanLabel.adjustsFontSizeToFitWidth = YES;
+            scanLabel.textAlignment = NSTextAlignmentCenter;
+            
+//            UILabel *RechargeLabel = [[UILabel alloc]initWithFrame:CGRectMake(212, 75, 48, 20)];
+//            RechargeLabel.text = @"账户充值";
+//            RechargeLabel.textColor = [Common hexStringToColor:@"#ffffff"];
+//            RechargeLabel.font = [UIFont systemFontOfSize:14];
+//            RechargeLabel.adjustsFontSizeToFitWidth = YES;
+//            scanLabel.textAlignment = UITextAlignmentCenter;
+            
+//            [view addSubview:RechargeLabel];
+            [view addSubview:scanLabel];
+            [view addSubview:scanBtn];
+            [view addSubview:RechargeBtn];
+            [foorerView addSubview:view];
+        }
+        reusableview = foorerView;
+    }
+    
+    return reusableview;
+}
+
+
+
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
