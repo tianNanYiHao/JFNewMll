@@ -342,6 +342,8 @@
 		AEE5F6341C4E1C0B006FAF60 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE5F6331C4E1C0A006FAF60 /* libstdc++.tbd */; };
 		AEE5F6361C4E1C17006FAF60 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE5F6351C4E1C17006FAF60 /* libz.tbd */; };
 		AEED5D621C0410AC00F2F2EB /* RechargeFixedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEED5D611C0410AC00F2F2EB /* RechargeFixedViewController.m */; };
+		BF1032361DFF8AF6003C6878 /* JFOpenMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1032341DFF8AF6003C6878 /* JFOpenMallViewController.m */; };
+		BF1032371DFF8AF6003C6878 /* JFOpenMallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF1032351DFF8AF6003C6878 /* JFOpenMallViewController.xib */; };
 		BF21CD581DB6138600963498 /* TickerOrderSureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21CD561DB6138600963498 /* TickerOrderSureViewController.m */; };
 		BF21CD591DB6138600963498 /* TickerOrderSureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF21CD571DB6138600963498 /* TickerOrderSureViewController.xib */; };
 		BF21CD5D1DB619A700963498 /* TrickPersonInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21CD5B1DB619A700963498 /* TrickPersonInfoCell.m */; };
@@ -612,11 +614,22 @@
 		BF3F32C11D4B1BB100D4A96E /* CompaneyProductInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3F32BF1D4B1BB100D4A96E /* CompaneyProductInfoController.m */; };
 		BF3F32C21D4B1BB100D4A96E /* CompaneyProductInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF3F32C01D4B1BB100D4A96E /* CompaneyProductInfoController.xib */; };
 		BF40F9601DFE3B04007B8433 /* JFShopCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF40F95F1DFE3B04007B8433 /* JFShopCarModel.m */; };
-		BF40F9621DFE467F007B8433 /* shoppingCar.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF40F9611DFE467F007B8433 /* shoppingCar.plist */; };
 		BF40F9661DFE5634007B8433 /* CarBuyHeadListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF40F9641DFE5634007B8433 /* CarBuyHeadListCell.m */; };
 		BF40F9671DFE5635007B8433 /* CarBuyHeadListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF40F9651DFE5634007B8433 /* CarBuyHeadListCell.xib */; };
 		BF40F96D1DFE9068007B8433 /* JFAddMyShopProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF40F96B1DFE9068007B8433 /* JFAddMyShopProductViewController.m */; };
 		BF40F96E1DFE9068007B8433 /* JFAddMyShopProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF40F96C1DFE9068007B8433 /* JFAddMyShopProductViewController.xib */; };
+		BF40F9701DFEA1EC007B8433 /* shoppingCar.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF40F96F1DFEA1EC007B8433 /* shoppingCar.plist */; };
+		BF40F9891DFEA22C007B8433 /* MJDictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BF40F9731DFEA22C007B8433 /* MJDictionaryCache.m */; };
+		BF40F98A1DFEA22C007B8433 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BF40F9761DFEA22C007B8433 /* MJExtensionConst.m */; };
+		BF40F98B1DFEA22C007B8433 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = BF40F9781DFEA22C007B8433 /* MJFoundation.m */; };
+		BF40F98C1DFEA22C007B8433 /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = BF40F97A1DFEA22C007B8433 /* MJProperty.m */; };
+		BF40F98D1DFEA22C007B8433 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = BF40F97C1DFEA22C007B8433 /* MJPropertyKey.m */; };
+		BF40F98E1DFEA22C007B8433 /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = BF40F97E1DFEA22C007B8433 /* MJPropertyType.m */; };
+		BF40F98F1DFEA22C007B8433 /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BF40F9801DFEA22C007B8433 /* NSObject+MJClass.m */; };
+		BF40F9901DFEA22C007B8433 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = BF40F9821DFEA22C007B8433 /* NSObject+MJCoding.m */; };
+		BF40F9911DFEA22C007B8433 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BF40F9841DFEA22C007B8433 /* NSObject+MJKeyValue.m */; };
+		BF40F9921DFEA22C007B8433 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = BF40F9861DFEA22C007B8433 /* NSObject+MJProperty.m */; };
+		BF40F9931DFEA22C007B8433 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BF40F9881DFEA22C007B8433 /* NSString+MJExtension.m */; };
 		BF43A9231D825C6800C9E722 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF43A9221D825C6800C9E722 /* AppDelegate.m */; };
 		BF43A9251D825C9700C9E722 /* jpush-ios-2.1.9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF43A9241D825C9700C9E722 /* jpush-ios-2.1.9.a */; };
 		BF4EA7791D7D3F7800E8B95D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4EA7781D7D3F7700E8B95D /* CoreFoundation.framework */; };
@@ -1389,6 +1402,9 @@
 		AEE5F6351C4E1C17006FAF60 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		AEED5D601C0410AC00F2F2EB /* RechargeFixedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeFixedViewController.h; sourceTree = "<group>"; };
 		AEED5D611C0410AC00F2F2EB /* RechargeFixedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeFixedViewController.m; sourceTree = "<group>"; };
+		BF1032331DFF8AF6003C6878 /* JFOpenMallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFOpenMallViewController.h; sourceTree = "<group>"; };
+		BF1032341DFF8AF6003C6878 /* JFOpenMallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFOpenMallViewController.m; sourceTree = "<group>"; };
+		BF1032351DFF8AF6003C6878 /* JFOpenMallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFOpenMallViewController.xib; sourceTree = "<group>"; };
 		BF21CD551DB6138500963498 /* TickerOrderSureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TickerOrderSureViewController.h; sourceTree = "<group>"; };
 		BF21CD561DB6138600963498 /* TickerOrderSureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TickerOrderSureViewController.m; sourceTree = "<group>"; };
 		BF21CD571DB6138600963498 /* TickerOrderSureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TickerOrderSureViewController.xib; sourceTree = "<group>"; };
@@ -1929,13 +1945,36 @@
 		BF3F32C01D4B1BB100D4A96E /* CompaneyProductInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompaneyProductInfoController.xib; sourceTree = "<group>"; };
 		BF40F95E1DFE3B04007B8433 /* JFShopCarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFShopCarModel.h; sourceTree = "<group>"; };
 		BF40F95F1DFE3B04007B8433 /* JFShopCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFShopCarModel.m; sourceTree = "<group>"; };
-		BF40F9611DFE467F007B8433 /* shoppingCar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = shoppingCar.plist; sourceTree = "<group>"; };
 		BF40F9631DFE5634007B8433 /* CarBuyHeadListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarBuyHeadListCell.h; sourceTree = "<group>"; };
 		BF40F9641DFE5634007B8433 /* CarBuyHeadListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarBuyHeadListCell.m; sourceTree = "<group>"; };
 		BF40F9651DFE5634007B8433 /* CarBuyHeadListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarBuyHeadListCell.xib; sourceTree = "<group>"; };
 		BF40F96A1DFE9068007B8433 /* JFAddMyShopProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFAddMyShopProductViewController.h; sourceTree = "<group>"; };
 		BF40F96B1DFE9068007B8433 /* JFAddMyShopProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFAddMyShopProductViewController.m; sourceTree = "<group>"; };
 		BF40F96C1DFE9068007B8433 /* JFAddMyShopProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFAddMyShopProductViewController.xib; sourceTree = "<group>"; };
+		BF40F96F1DFEA1EC007B8433 /* shoppingCar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = shoppingCar.plist; sourceTree = "<group>"; };
+		BF40F9721DFEA22C007B8433 /* MJDictionaryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJDictionaryCache.h; sourceTree = "<group>"; };
+		BF40F9731DFEA22C007B8433 /* MJDictionaryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJDictionaryCache.m; sourceTree = "<group>"; };
+		BF40F9741DFEA22C007B8433 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		BF40F9751DFEA22C007B8433 /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
+		BF40F9761DFEA22C007B8433 /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
+		BF40F9771DFEA22C007B8433 /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		BF40F9781DFEA22C007B8433 /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		BF40F9791DFEA22C007B8433 /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		BF40F97A1DFEA22C007B8433 /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		BF40F97B1DFEA22C007B8433 /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
+		BF40F97C1DFEA22C007B8433 /* MJPropertyKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyKey.m; sourceTree = "<group>"; };
+		BF40F97D1DFEA22C007B8433 /* MJPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyType.h; sourceTree = "<group>"; };
+		BF40F97E1DFEA22C007B8433 /* MJPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyType.m; sourceTree = "<group>"; };
+		BF40F97F1DFEA22C007B8433 /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
+		BF40F9801DFEA22C007B8433 /* NSObject+MJClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJClass.m"; sourceTree = "<group>"; };
+		BF40F9811DFEA22C007B8433 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		BF40F9821DFEA22C007B8433 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		BF40F9831DFEA22C007B8433 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		BF40F9841DFEA22C007B8433 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		BF40F9851DFEA22C007B8433 /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		BF40F9861DFEA22C007B8433 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		BF40F9871DFEA22C007B8433 /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
+		BF40F9881DFEA22C007B8433 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
 		BF43A9221D825C6800C9E722 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BF43A9241D825C9700C9E722 /* jpush-ios-2.1.9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-2.1.9.a"; sourceTree = "<group>"; };
 		BF4EA7781D7D3F7700E8B95D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -2786,6 +2825,7 @@
 		591BBFC21AEDFE320037199A /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				BF40F9711DFEA22C007B8433 /* MJExtension */,
 				BF7E3E701DB88BD50042BDC4 /* LFFPickerView */,
 				BFAF03561DB0C2D900281517 /* LFFStringArray */,
 				BFEF39051DAF67F00043A852 /* easyFrame */,
@@ -3332,6 +3372,9 @@
 				BF40F96A1DFE9068007B8433 /* JFAddMyShopProductViewController.h */,
 				BF40F96B1DFE9068007B8433 /* JFAddMyShopProductViewController.m */,
 				BF40F96C1DFE9068007B8433 /* JFAddMyShopProductViewController.xib */,
+				BF1032331DFF8AF6003C6878 /* JFOpenMallViewController.h */,
+				BF1032341DFF8AF6003C6878 /* JFOpenMallViewController.m */,
+				BF1032351DFF8AF6003C6878 /* JFOpenMallViewController.xib */,
 				33F51DE71DFE9950008077E9 /* ShopFooterReusableView.h */,
 				33F51DE81DFE9950008077E9 /* ShopFooterReusableView.m */,
 			);
@@ -4724,6 +4767,36 @@
 			name = view;
 			sourceTree = "<group>";
 		};
+		BF40F9711DFEA22C007B8433 /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				BF40F9721DFEA22C007B8433 /* MJDictionaryCache.h */,
+				BF40F9731DFEA22C007B8433 /* MJDictionaryCache.m */,
+				BF40F9741DFEA22C007B8433 /* MJExtension.h */,
+				BF40F9751DFEA22C007B8433 /* MJExtensionConst.h */,
+				BF40F9761DFEA22C007B8433 /* MJExtensionConst.m */,
+				BF40F9771DFEA22C007B8433 /* MJFoundation.h */,
+				BF40F9781DFEA22C007B8433 /* MJFoundation.m */,
+				BF40F9791DFEA22C007B8433 /* MJProperty.h */,
+				BF40F97A1DFEA22C007B8433 /* MJProperty.m */,
+				BF40F97B1DFEA22C007B8433 /* MJPropertyKey.h */,
+				BF40F97C1DFEA22C007B8433 /* MJPropertyKey.m */,
+				BF40F97D1DFEA22C007B8433 /* MJPropertyType.h */,
+				BF40F97E1DFEA22C007B8433 /* MJPropertyType.m */,
+				BF40F97F1DFEA22C007B8433 /* NSObject+MJClass.h */,
+				BF40F9801DFEA22C007B8433 /* NSObject+MJClass.m */,
+				BF40F9811DFEA22C007B8433 /* NSObject+MJCoding.h */,
+				BF40F9821DFEA22C007B8433 /* NSObject+MJCoding.m */,
+				BF40F9831DFEA22C007B8433 /* NSObject+MJKeyValue.h */,
+				BF40F9841DFEA22C007B8433 /* NSObject+MJKeyValue.m */,
+				BF40F9851DFEA22C007B8433 /* NSObject+MJProperty.h */,
+				BF40F9861DFEA22C007B8433 /* NSObject+MJProperty.m */,
+				BF40F9871DFEA22C007B8433 /* NSString+MJExtension.h */,
+				BF40F9881DFEA22C007B8433 /* NSString+MJExtension.m */,
+			);
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
 		BF4EA7741D7D3D4800E8B95D /* JpushSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -4877,7 +4950,6 @@
 		BFEE69FB1DF7F174003A01C3 /* CarBuy */ = {
 			isa = PBXGroup;
 			children = (
-				BF40F9611DFE467F007B8433 /* shoppingCar.plist */,
 				BFEE69FC1DF7F1A2003A01C3 /* CarBuyViewController.h */,
 				BFEE69FD1DF7F1A2003A01C3 /* CarBuyViewController.m */,
 				BFEE6A0E1DF8042D003A01C3 /* CarBuyListCell.h */,
@@ -4894,6 +4966,7 @@
 				BFEE6A0B1DF7FCCA003A01C3 /* CarBuyAddressListCell.xib */,
 				BF40F95E1DFE3B04007B8433 /* JFShopCarModel.h */,
 				BF40F95F1DFE3B04007B8433 /* JFShopCarModel.m */,
+				BF40F96F1DFEA1EC007B8433 /* shoppingCar.plist */,
 			);
 			path = CarBuy;
 			sourceTree = "<group>";
@@ -5250,6 +5323,8 @@
 				591BC3A51AEDFE6A0037199A /* HandSignViewController.xib in Resources */,
 				87E058D81C044DBD00C4A4C1 /* Icon-40.png in Resources */,
 				BF21CD591DB6138600963498 /* TickerOrderSureViewController.xib in Resources */,
+				BF1032371DFF8AF6003C6878 /* JFOpenMallViewController.xib in Resources */,
+				BF40F9701DFEA1EC007B8433 /* shoppingCar.plist in Resources */,
 				32F3A8311AD5285600763B72 /* coolblack.TTF in Resources */,
 				AEE5F6181C4E199F006FAF60 /* UMShareEditViewControlleriPad.xib in Resources */,
 				339B9A4E1D7D68A6004D0E1B /* ShareSDKUI.bundle in Resources */,
@@ -5294,7 +5369,6 @@
 				BFE2EC801DE68AD60054C011 /* JFFlowViewController.xib in Resources */,
 				AEE5F6241C4E19B1006FAF60 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				BF21CD5E1DB619A700963498 /* TrickPersonInfoCell.xib in Resources */,
-				BF40F9621DFE467F007B8433 /* shoppingCar.plist in Resources */,
 				339B9A531D7D68A6004D0E1B /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				87E058DE1C044DBD00C4A4C1 /* Icon-72.png in Resources */,
 				BFF5552D1DAB8DA200F110B7 /* TrickChooseCarListViewController.xib in Resources */,
@@ -5350,6 +5424,7 @@
 				BF3C8FE91D5834A50092AC19 /* ZXByQuadrantReader.m in Sources */,
 				591BC3821AEDFE6A0037199A /* MyMessageViewController.m in Sources */,
 				591BC0F21AEDFE330037199A /* SimpleCam.m in Sources */,
+				BF40F98D1DFEA22C007B8433 /* MJPropertyKey.m in Sources */,
 				D598134A1BD08B6700B0169F /* RadioButton.m in Sources */,
 				BF3C90341D5834A50092AC19 /* ZXPDF417Dimensions.m in Sources */,
 				BFC0421A1D70120A0090CAFC /* AFURLSessionManager.m in Sources */,
@@ -5369,6 +5444,7 @@
 				BFF5552C1DAB8DA200F110B7 /* TrickChooseCarListViewController.m in Sources */,
 				591BC2A01AEDFE6A0037199A /* OrderData.m in Sources */,
 				591BC0AF1AEDFE320037199A /* IQSegmentedNextPrevious.m in Sources */,
+				BF40F9931DFEA22C007B8433 /* NSString+MJExtension.m in Sources */,
 				591BC0E91AEDFE330037199A /* UIView+WebCacheOperation.m in Sources */,
 				BFC0421E1D70120A0090CAFC /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				AE8EA4381C5F698E00823760 /* EnterViewController.m in Sources */,
@@ -5393,6 +5469,7 @@
 				591BC3A21AEDFE6A0037199A /* ShoppingCartTableViewCell.m in Sources */,
 				591BC0B91AEDFE320037199A /* Toast+UIView.m in Sources */,
 				AE8EA4331C5F698E00823760 /* AuthenticationEnterpriseViewController.m in Sources */,
+				BF1032361DFF8AF6003C6878 /* JFOpenMallViewController.m in Sources */,
 				BF3C8F971D5834A50092AC19 /* ZXParsedResult.m in Sources */,
 				BF21CD5D1DB619A700963498 /* TrickPersonInfoCell.m in Sources */,
 				591BC35D1AEDFE6A0037199A /* PayViewController.m in Sources */,
@@ -5440,6 +5517,7 @@
 				BF3C8F6C1D5834A50092AC19 /* LBXScanNetAnimation.m in Sources */,
 				BFEF39091DAF67F00043A852 /* Foundation+Log.m in Sources */,
 				BF3C90191D5834A50092AC19 /* ZXOneDReader.m in Sources */,
+				BF40F9901DFEA22C007B8433 /* NSObject+MJCoding.m in Sources */,
 				BF3C901B1D5834A50092AC19 /* ZXUPCAWriter.m in Sources */,
 				BF3C90431D5834A50092AC19 /* ZXQRCodeMode.m in Sources */,
 				BF3C904F1D5834A50092AC19 /* ZXQRCodeMatrixUtil.m in Sources */,
@@ -5488,6 +5566,7 @@
 				3348AE1E1D362230001AC684 /* AddWeChatBankcardViewController.m in Sources */,
 				591BC3881AEDFE6A0037199A /* TakingIDcardPositiveViewController.m in Sources */,
 				591BC3621AEDFE6A0037199A /* WaterElectricityCoalViewController.m in Sources */,
+				BF40F9921DFEA22C007B8433 /* NSObject+MJProperty.m in Sources */,
 				D561520F1BDF6EA100DAAADC /* MJRefreshAutoGifFooter.m in Sources */,
 				AE8EA4361C5F698E00823760 /* FoodDataViewController.m in Sources */,
 				BF3C90441D5834A50092AC19 /* ZXQRCodeVersion.m in Sources */,
@@ -5509,6 +5588,7 @@
 				BFEF24C71DAA388B00D61F0F /* TrickMainViewController.m in Sources */,
 				AE8EA4371C5F698E00823760 /* FoodInFormationViewController.m in Sources */,
 				BF3C90301D5834A50092AC19 /* ZXPDF417DetectorResult.m in Sources */,
+				BF40F9891DFEA22C007B8433 /* MJDictionaryCache.m in Sources */,
 				BF3C8FCC1D5834A50092AC19 /* ZXLuminanceSource.m in Sources */,
 				BF3C8FE71D5834A50092AC19 /* ZXMaxiCodeDecoder.m in Sources */,
 				BFBA83301DF9127D00DF99F8 /* JFcustomHeadView.m in Sources */,
@@ -5549,6 +5629,7 @@
 				33F257411D62BC6600A4ECC0 /* ZFBBankCardListViewController.m in Sources */,
 				BF3C90331D5834A50092AC19 /* ZXPDF417BarcodeRow.m in Sources */,
 				BF3C8FC61D5834A50092AC19 /* ZXByteMatrix.m in Sources */,
+				BF40F98C1DFEA22C007B8433 /* MJProperty.m in Sources */,
 				D56152271BDF6F7E00DAAADC /* BoRefreshAutoStateFooter.m in Sources */,
 				D56152191BDF6EA100DAAADC /* MJRefreshConst.m in Sources */,
 				BF3C900E1D5834A50092AC19 /* ZXCode93Reader.m in Sources */,
@@ -5684,6 +5765,7 @@
 				BF3C8F9F1D5834A50092AC19 /* ZXTelParsedResult.m in Sources */,
 				591BC29F1AEDFE6A0037199A /* MallData.m in Sources */,
 				BFC0421F1D70120A0090CAFC /* UIButton+AFNetworking.m in Sources */,
+				BF40F98B1DFEA22C007B8433 /* MJFoundation.m in Sources */,
 				BF3C8FEB1D5834A50092AC19 /* ZXAbstractExpandedDecoder.m in Sources */,
 				591BC3AD1AEDFE6A0037199A /* ABCIntroView.m in Sources */,
 				BF3C8FDD1D5834A50092AC19 /* ZXDataMatrixErrorCorrection.m in Sources */,
@@ -5701,6 +5783,7 @@
 				591BC3991AEDFE6A0037199A /* ContractView.m in Sources */,
 				BF3C8FA51D5834A50092AC19 /* ZXVCardResultParser.m in Sources */,
 				591BC0EA1AEDFE330037199A /* ChineseInclude.m in Sources */,
+				BF40F98F1DFEA22C007B8433 /* NSObject+MJClass.m in Sources */,
 				BFEF390A1DAF67F00043A852 /* UIView+Extension.m in Sources */,
 				D561521B1BDF6EA100DAAADC /* UIScrollView+MJRefresh.m in Sources */,
 				33B690C11D5C55DB00F1AC08 /* AddRunSubBankcardViewController.m in Sources */,
@@ -5718,6 +5801,7 @@
 				BF3C90101D5834A50092AC19 /* ZXEAN13Writer.m in Sources */,
 				591BC3891AEDFE6A0037199A /* TakingIDcardReverseViewController.m in Sources */,
 				BF3E10161D49E9F2003F0F89 /* CompaneyDetialController2.m in Sources */,
+				BF40F9911DFEA22C007B8433 /* NSObject+MJKeyValue.m in Sources */,
 				BF3C8FDB1D5834A50092AC19 /* ZXDataMatrixEdifactEncoder.m in Sources */,
 				BF3C8F641D5834A50092AC19 /* UIAlertController+supportedInterfaceOrientations.m in Sources */,
 				BF5860531D9D058600777D7D /* YSTWechatViewController.m in Sources */,
@@ -5782,6 +5866,7 @@
 				D5AE0EB01BC90C7E0094CE5E /* UIView+SDExtension.m in Sources */,
 				BF3C90001D5834A50092AC19 /* ZXRSSExpandedReader.m in Sources */,
 				BF3C8FAE1D5834A50092AC19 /* ZXMathUtils.m in Sources */,
+				BF40F98A1DFEA22C007B8433 /* MJExtensionConst.m in Sources */,
 				591BC0E21AEDFE330037199A /* SDWebImagePrefetcher.m in Sources */,
 				BF3C8FF31D5834A50092AC19 /* ZXAI01decoder.m in Sources */,
 				BF3C8F8D1D5834A50092AC19 /* ZXCalendarParsedResult.m in Sources */,
@@ -5899,6 +5984,7 @@
 				BF3C901F1D5834A50092AC19 /* ZXUPCEANReader.m in Sources */,
 				591BC37C1AEDFE6A0037199A /* MessageCell.m in Sources */,
 				BF3C8FE21D5834A50092AC19 /* ZXDataMatrixX12Encoder.m in Sources */,
+				BF40F98E1DFEA22C007B8433 /* MJPropertyType.m in Sources */,
 				BF3C901D1D5834A50092AC19 /* ZXUPCEANExtension5Support.m in Sources */,
 				88E6BBF71AB029BD00AD89E0 /* main.m in Sources */,
 				BFC042201D70120A0090CAFC /* UIImageView+AFNetworking.m in Sources */,

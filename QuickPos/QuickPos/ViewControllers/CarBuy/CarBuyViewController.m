@@ -23,7 +23,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableShowView;
 @property (weak, nonatomic) IBOutlet UIButton *buyBtn;//结算按钮
 @property (weak, nonatomic) IBOutlet UILabel *moneyShowLab;//金额Lab
-
 @end
 
 @implementation CarBuyViewController
@@ -70,7 +69,10 @@
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"shoppingCar" ofType:@"plist"];
     NSArray *arr = [[NSArray alloc] initWithContentsOfFile:path];
-    self.arrSection = (NSMutableArray*)arr;
+    JFShopCarModel *model = [JFShopCarModel mj_objectWithFile:path];
+    if (![self.arrSection containsObject:@(model.store_id)]) {
+        [self.arrSection addObject:@(model.store_id)];
+    }
     
 }
 
