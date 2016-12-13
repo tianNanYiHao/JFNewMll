@@ -1,23 +1,27 @@
 //
-//  JFAddMyShopProductViewController.m
+//  JFOpenMallViewController.m
 //  QuickPos
 //
-//  Created by Lff on 16/12/12.
+//  Created by Lff on 16/12/13.
 //  Copyright © 2016年 张倡榕. All rights reserved.
 //
 
-#import "JFAddMyShopProductViewController.h"
+#import "JFOpenMallViewController.h"
 
-@interface JFAddMyShopProductViewController ()
+@interface JFOpenMallViewController ()
+{
+   
+}
 
 @end
 
-@implementation JFAddMyShopProductViewController
+@implementation JFOpenMallViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"添加商品";
+    
 }
 
 - (void)didReceiveMemoryWarning {
