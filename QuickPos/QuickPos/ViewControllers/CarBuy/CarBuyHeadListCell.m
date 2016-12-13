@@ -26,10 +26,20 @@
 
 - (void)setModel:(JFShopCarModel *)model{
     _model = model;
-    _selectedBtn.selected = model.isSelected;
     _shopNameLab.text = model.store_name;
     
 }
+
+- (IBAction)storebtnclick:(UIButton*)sender {
+    CarBuyHeadListCell *cell = (CarBuyHeadListCell*)sender.superview.superview;
+    if ([_delegate respondsToSelector:@selector(chooseStoreBtn:store_id:)]) {
+        [_delegate chooseStoreBtn:sender store_id:cell.model.store_id];
+    }
+    
+    
+}
+
+
 
 
 

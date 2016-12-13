@@ -23,6 +23,9 @@
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <state key="normal" image="Circular_unselected"/>
                         <state key="selected" image="Circular_selected"/>
+                        <connections>
+                            <action selector="storebtnclick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="CGm-d0-daQ"/>
+                        </connections>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menu_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="VM5-0E-2Fm">
                         <constraints>

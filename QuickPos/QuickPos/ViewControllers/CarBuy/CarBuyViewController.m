@@ -11,13 +11,15 @@
 #import "CarBuyHeadListCell.h"
 #import "JFShopCarModel.h"
 
-@interface CarBuyViewController ()<UITableViewDelegate,UITableViewDataSource,CarBuyListCellDelegate>
+@interface CarBuyViewController ()<UITableViewDelegate,UITableViewDataSource,CarBuyListCellDelegate,CarBuyHeadListCellDelegate>
 {
     
     
 }
 @property (nonatomic,strong) NSMutableArray *arrSection;
 @property (nonatomic,strong) NSMutableDictionary *shopCarDic;
+@property (nonatomic,strong) NSMutableArray *selectedShopArray;
+@property (nonatomic,strong) NSMutableArray *selectedStoreArray;
 @property (nonatomic,strong) JFShopCarModel *model;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableShowView;
@@ -35,6 +37,10 @@
     }
     return _arrSection;
 }
+
+/**
+ JFShopCarModel 模型字典
+ */
 -(NSMutableDictionary *)shopCarDic{
     if (!_shopCarDic) {
         _shopCarDic = [[NSMutableDictionary alloc] initWithCapacity:0];
@@ -46,6 +52,25 @@
     }
     return _model;
 }
+
+/**
+ 选中的商品数组
+ */
+- (NSMutableArray *)selectedShopArray{
+    if (!_selectedShopArray) {
+        _selectedShopArray = [NSMutableArray new];
+    }return _selectedShopArray;
+}
+
+/**
+ 选中的商店数组
+ */
+- (NSMutableArray *)selectedStoreArray{
+    if (!_selectedStoreArray) {
+        _selectedStoreArray = [NSMutableArray new];
+    }return _selectedStoreArray;
+}
+
 
 
 //结算点击事件
@@ -71,6 +96,10 @@
 }
 
 -(void)setModel{
+    //清空
+    [self.selectedShopArray removeAllObjects];
+    [self.selectedStoreArray removeAllObjects];
+    
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"shoppingCar" ofType:@"plist"];
     NSArray *arr = [[NSArray alloc] initWithContentsOfFile:path];
@@ -164,6 +193,7 @@
             CarBuyHeadListCell *cell = [tableView dequeueReusableCellWithIdentifier:iDD forIndexPath:indexPath];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             cell.model = array[indexPath.row];
+            cell.delegate = self;
             return cell;
         }
         else{
@@ -184,13 +214,30 @@
 }
 #pragma mark - CarBuyListDelete
 -(void)chooseBtnClickDelegate:(UIButton *)btn model:(JFShopCarModel *)model{
-    btn.selected = !btn.selected;
+    //
+    if ([self.selectedShopArray containsObject:model]) {
+        [self.selectedShopArray removeObject:model];
+        model.isSelected = NO;
+    }
+    else{
+        [self.selectedShopArray addObject:model];
+        model.isSelected = YES;
+    }
+    [_tableShowView reloadData];
 }
 -(void)jianBtnClickDelegate{
     NSLog(@"lalallal -------");
 }
 -(void)jiaBtnClickDelegate{
     NSLog(@"lalalal ++++");
+}
+
+#pragma mark - CarBuyHeadviewListDelegate
+-(void)chooseStoreBtn:(UIButton *)btn store_id:(NSInteger)storeId{
+    
+    
+    
+    
 }
 
 
