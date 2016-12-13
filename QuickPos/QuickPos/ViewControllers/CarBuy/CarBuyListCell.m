@@ -8,6 +8,7 @@
 
 #import "CarBuyListCell.h"
 #import "JFShopCarModel.h"
+#import "UIImageView+WebCache.h"
 
 @implementation CarBuyListCell
 
@@ -52,7 +53,10 @@
 - (void)setModel:(JFShopCarModel *)model{
     _model = model;
     _chooseBtn.selected = model.isSelected;
-    
+    [_imageIcon sd_setImageWithURL:[NSURL URLWithString:model.goods_image_url] placeholderImage:[UIImage imageNamed:model.goods_image]];
+    _titleLab.text = model.goods_name;
+    [_titleLab sizeToFit];
+    _moneyLab.text = [NSString stringWithFormat:@"%.2f",model.goods_price];
 }
 
 
