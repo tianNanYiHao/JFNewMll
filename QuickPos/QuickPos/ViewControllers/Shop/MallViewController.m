@@ -28,6 +28,7 @@
 #import "DetailOriginOfGoodsViewController.h"
 #import "ShopFooterReusableView.h"
 #import "JFAddMyShopProductViewController.h"
+#import "LoginViewController.h"
 
 #define tableCellHeight 30
 #define kHeaderReuseID @"headerView"
@@ -181,6 +182,8 @@
 
 @property (nonatomic,strong) NSString *cataId;
 
+@property (nonatomic,strong) NSString *authenFlags;
+
 
 @end
 
@@ -195,6 +198,8 @@
     [self initData];
     [self createSegmented];
     [self creatRightBtn];
+    
+    NSLog(@"%@", [AppDelegate getUserBaseData].userType);
     
     self.title = @"首页";
     self.view.backgroundColor = [UIColor whiteColor];
@@ -650,72 +655,88 @@
 
 - (void)segmentACT:(UISegmentedControl *)Seg
 {
-    //线动画
-    [UIView animateWithDuration:0.25 animations:^{
-        CGRect frame = self.line.frame;
-        frame.origin.x = Seg.frame.origin.x;
-        self.line.frame = frame;
-    }];
-    
-    NSInteger index = Seg.selectedSegmentIndex;
-    
-    switch (index) {
-        case 0:
-        {
-            [self.button1 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-            [self.button2 setTitleColor:[UIColor lightGrayColor]  forState:UIControlStateNormal];
-            [self.button3 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-            [self.segview1 setHidden:YES];
-            [self.segview2 setHidden:YES];
-            [self.segview3 setHidden:YES];
-            [self.Segview4 setHidden:YES];
-            [self.segview5 setHidden:YES];
-          
-            [self.mainView bringSubviewToFront:self.shoplist1];
-            
-            [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在加载商品数据."];
-            [request getTodyKillProductWithCardId:self.cataId];
-            
-
-        }
-        break;
-        case 1:
-        {
-            [self.button1 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-            [self.button2 setTitleColor:[UIColor lightGrayColor]  forState:UIControlStateNormal];
-            [self.button3 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-                        [self.segview1 setHidden:YES];
-                        [self.segview2 setHidden:YES];
-                        [self.segview3 setHidden:YES];
-                        [self.Segview4 setHidden:YES];
-                        [self.segview5 setHidden:YES];
-          
-            [self.mainView bringSubviewToFront:self.shoplist1];
-            
-            [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在加载商品数据."];
-            [request getTodyKillProductWithCardId:self.cataId];
+    if ([[AppDelegate getUserBaseData].mobileNo length] > 0) {
+        //线动画
+        [UIView animateWithDuration:0.25 animations:^{
+            CGRect frame = self.line.frame;
+            frame.origin.x = Seg.frame.origin.x;
+            self.line.frame = frame;
+        }];
         
+        NSInteger index = Seg.selectedSegmentIndex;
+        
+        switch (index) {
+            case 0:
+            {
+                [self.button1 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+                [self.button2 setTitleColor:[UIColor lightGrayColor]  forState:UIControlStateNormal];
+                [self.button3 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+                [self.segview1 setHidden:YES];
+                [self.segview2 setHidden:YES];
+                [self.segview3 setHidden:YES];
+                [self.Segview4 setHidden:YES];
+                [self.segview5 setHidden:YES];
+                
+                [self.mainView bringSubviewToFront:self.shoplist1];
+                
+                [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在加载商品数据."];
+                [request getTodyKillProductWithCardId:self.cataId];
+                
+                
+            }
+                break;
+            case 1:
+            {
+                [self.button1 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+                [self.button2 setTitleColor:[UIColor lightGrayColor]  forState:UIControlStateNormal];
+                [self.button3 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+                [self.segview1 setHidden:YES];
+                [self.segview2 setHidden:YES];
+                [self.segview3 setHidden:YES];
+                [self.Segview4 setHidden:YES];
+                [self.segview5 setHidden:YES];
+                
+                [self.mainView bringSubviewToFront:self.shoplist1];
+                
+                [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在加载商品数据."];
+                [request getTodyKillProductWithCardId:self.cataId];
+                
+            }
+                break;
+            case 2:
+            {
+                
+                if ([[AppDelegate getUserBaseData].userType integerValue] == 00) {
+                    
+                    [self.button1 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+                    [self.button2 setTitleColor:[UIColor lightGrayColor]  forState:UIControlStateNormal];
+                    [self.button3 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+                    [self.segview1 setHidden:YES];
+                    [self.segview2 setHidden:YES];
+                    [self.segview3 setHidden:YES];
+                    [self.Segview4 setHidden:YES];
+                    [self.segview5 setHidden:YES];
+                    
+                    [request userInfo:[AppDelegate getUserBaseData].userType];
+                    [self.mainView bringSubviewToFront:self.shoplist1];
+                    
+                }else
+                {
+                    
+                    [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在加载商品数据."];
+                    [request getTodyKillProductWithCardId:self.cataId];
+                    [self.mainView bringSubviewToFront:self.shoplist1];
+                }
+                
+            }
+                break;
+            default:
+                break;
         }
-        break;
-        case 2:
-        {
-            [self.button1 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-            [self.button2 setTitleColor:[UIColor lightGrayColor]  forState:UIControlStateNormal];
-            [self.button3 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-            [self.segview1 setHidden:YES];
-            [self.segview2 setHidden:YES];
-            [self.segview3 setHidden:YES];
-            [self.Segview4 setHidden:YES];
-            [self.segview5 setHidden:YES];
-            
-            [self.mainView bringSubviewToFront:self.shoplist1];
-            
-            [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在加载商品数据."];
-            [request getTodyKillProductWithCardId:self.cataId];
-        }
-            break;
-        default:
-            break;
+    }else{
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        LoginViewController *login = [storyBoard instantiateViewControllerWithIdentifier:@"QuickPosNavigationController"];
+        [self presentViewController:login animated:YES completion:nil];
     }
 }
 
@@ -1006,7 +1027,19 @@
             [MBProgressHUD showHUDAddedTo:self.view WithString:@"查询失败！"];
         }
     }
-    
+    else if (type == REQUSET_USERINFOQUERY){//查询用户实名认证信息
+        if ([[dict objectForKey:@"respCode"]isEqualToString:@"0000"]) {
+            
+            self.authenFlags = [[[dict objectForKey:@"data"]objectForKey:@"resultBean"]objectForKey:@"authenFlag"];
+            NSLog(@"<<<<<<<<<<<<%@",self.authenFlags);
+            if ([self.authenFlags integerValue] == 3) {
+            
+            }else{
+                [Common showMsgBox:nil msg:@"请先实名认证" parentCtrl:self];
+                [self.mainView bringSubviewToFront:self.shoplist2];
+            }
+        }
+    }
     //合计
     else if (type == REQUSET_GETMONEY) {
 
@@ -1428,69 +1461,66 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    
-    indexRow = indexPath.row;
-    
-    
-    if (collectionView.tag == 60001) {
-        [self.mainView bringSubviewToFront:self.mallDetailView];
-        for (id v in buttonArray) {
-            if ([v isKindOfClass:[UIButton class]]) {
-                [(UIButton *)v removeFromSuperview];
+    if ([[AppDelegate getUserBaseData].mobileNo length] > 0) {
+        indexRow = indexPath.row;
+        if (collectionView.tag == 60001) {
+            [self.mainView bringSubviewToFront:self.mallDetailView];
+            for (id v in buttonArray) {
+                if ([v isKindOfClass:[UIButton class]]) {
+                    [(UIButton *)v removeFromSuperview];
+                }
             }
-        }
-        [buttonArray removeAllObjects];
-        prodetailNum = 1;
-
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在加载商品数据."];
-        
-        oneProductDic = [[NSDictionary alloc] initWithDictionary:[productListArray objectAtIndex:indexPath.row]];
-        
-        NSLog(@"%@",productListArray);
-        
-        
-        [request getDetailInfoWithProductId:[[productListArray objectAtIndex:indexPath.row] objectForKey:@"productId"] withTraceabilityId:[[productListArray objectAtIndex:indexPath.row] objectForKey:@"traceability"]];
-
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-        
-    }else if (collectionView.tag == 60002){
-        
-        for (id v in buttonArray) {
-            if ([v isKindOfClass:[UIButton class]]) {
-                [(UIButton *)v removeFromSuperview];
-            }
-        }
-        [buttonArray removeAllObjects];
-        prodetailNum = 1;
-
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在加载商品数据."];
-        
-
-        if (_isMall) {
-            _isMall = NO;
-            [request getProductIdWithCardId:[[productDicArray objectAtIndex:indexPath.row] objectForKey:@"cateId"]];
-            NSLog(@"%@",request);
-
-
-
-            
-            [self.mainView bringSubviewToFront:self.mallCollectionView1];
-        }else{
+            [buttonArray removeAllObjects];
+            prodetailNum = 1;
             
             [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在加载商品数据."];
-            [request getDetailInfoWithProductId:[[productDicArray objectAtIndex:indexPath.row] objectForKey:@"productId"] withTraceabilityId:[[productDicArray objectAtIndex:indexPath.row] objectForKey:@"traceability"]];
             
-            NSLog(@"%@  %@",productDicArray,productListArray);
+            oneProductDic = [[NSDictionary alloc] initWithDictionary:[productListArray objectAtIndex:indexPath.row]];
             
-            [self.mainView bringSubviewToFront:self.mallDetailView];
+            NSLog(@"%@",productListArray);
             
             
+            [request getDetailInfoWithProductId:[[productListArray objectAtIndex:indexPath.row] objectForKey:@"productId"] withTraceabilityId:[[productListArray objectAtIndex:indexPath.row] objectForKey:@"traceability"]];
+            
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            
+        }else if (collectionView.tag == 60002){
+            
+            for (id v in buttonArray) {
+                if ([v isKindOfClass:[UIButton class]]) {
+                    [(UIButton *)v removeFromSuperview];
+                }
+            }
+            [buttonArray removeAllObjects];
+            prodetailNum = 1;
+            
+            [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在加载商品数据."];
+            
+            
+            if (_isMall) {
+                _isMall = NO;
+                [request getProductIdWithCardId:[[productDicArray objectAtIndex:indexPath.row] objectForKey:@"cateId"]];
+                NSLog(@"%@",request);
+                
+                
+                
+                
+                [self.mainView bringSubviewToFront:self.mallCollectionView1];
+            }else{
+                
+                [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在加载商品数据."];
+                [request getDetailInfoWithProductId:[[productDicArray objectAtIndex:indexPath.row] objectForKey:@"productId"] withTraceabilityId:[[productDicArray objectAtIndex:indexPath.row] objectForKey:@"traceability"]];
+                
+                NSLog(@"%@  %@",productDicArray,productListArray);
+                
+                [self.mainView bringSubviewToFront:self.mallDetailView];
+            }
         }
-//        [hud hide:YES afterDelay:1];
-//        [MBProgressHUD hideHUDForView:self.view animated:YES];
-
+    }else{
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        LoginViewController *login = [storyBoard instantiateViewControllerWithIdentifier:@"QuickPosNavigationController"];
+        [self presentViewController:login animated:YES completion:nil];
     }
-    
 }
 
 #pragma mark ------添加商品跳转 ------
