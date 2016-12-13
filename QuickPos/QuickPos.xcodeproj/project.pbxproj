@@ -652,8 +652,6 @@
 		BFA862131DBDA78C004289DD /* TrickDetailShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA862111DBDA78C004289DD /* TrickDetailShowCell.m */; };
 		BFA862141DBDA78C004289DD /* TrickDetailShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA862121DBDA78C004289DD /* TrickDetailShowCell.xib */; };
 		BFAF035B1DB0C2FB00281517 /* 捷丰商户.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFAF035A1DB0C2FB00281517 /* 捷丰商户.txt */; };
-		BFBA83301DF9127D00DF99F8 /* JFcustomHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBA832F1DF9127D00DF99F8 /* JFcustomHeadView.m */; };
-		BFBA83341DF92B2900DF99F8 /* JFcustomHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFBA83331DF92B2900DF99F8 /* JFcustomHeadView.xib */; };
 		BFC042151D70120A0090CAFC /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC041F41D70120A0090CAFC /* AFHTTPSessionManager.m */; };
 		BFC042161D70120A0090CAFC /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC041F71D70120A0090CAFC /* AFNetworkReachabilityManager.m */; };
 		BFC042171D70120A0090CAFC /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC041F91D70120A0090CAFC /* AFSecurityPolicy.m */; };
@@ -2013,9 +2011,6 @@
 		BFA862121DBDA78C004289DD /* TrickDetailShowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrickDetailShowCell.xib; sourceTree = "<group>"; };
 		BFAF035A1DB0C2FB00281517 /* 捷丰商户.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "捷丰商户.txt"; sourceTree = "<group>"; };
 		BFAF03601DB0C7F800281517 /* LFFStringarr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFStringarr.h; sourceTree = "<group>"; };
-		BFBA832E1DF9127D00DF99F8 /* JFcustomHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFcustomHeadView.h; sourceTree = "<group>"; };
-		BFBA832F1DF9127D00DF99F8 /* JFcustomHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFcustomHeadView.m; sourceTree = "<group>"; };
-		BFBA83331DF92B2900DF99F8 /* JFcustomHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JFcustomHeadView.xib; sourceTree = "<group>"; };
 		BFC041F31D70120A0090CAFC /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		BFC041F41D70120A0090CAFC /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		BFC041F51D70120A0090CAFC /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -4958,9 +4953,6 @@
 				BF40F9631DFE5634007B8433 /* CarBuyHeadListCell.h */,
 				BF40F9641DFE5634007B8433 /* CarBuyHeadListCell.m */,
 				BF40F9651DFE5634007B8433 /* CarBuyHeadListCell.xib */,
-				BFBA832E1DF9127D00DF99F8 /* JFcustomHeadView.h */,
-				BFBA832F1DF9127D00DF99F8 /* JFcustomHeadView.m */,
-				BFBA83331DF92B2900DF99F8 /* JFcustomHeadView.xib */,
 				BFEE6A091DF7FCCA003A01C3 /* CarBuyAddressListCell.h */,
 				BFEE6A0A1DF7FCCA003A01C3 /* CarBuyAddressListCell.m */,
 				BFEE6A0B1DF7FCCA003A01C3 /* CarBuyAddressListCell.xib */,
@@ -5376,7 +5368,6 @@
 				BF21CD631DB61C5500963498 /* TrickOrderCell.xib in Resources */,
 				87E058E51C044DBD00C4A4C1 /* Icon-Small@2x.png in Resources */,
 				591BC3961AEDFE6A0037199A /* ChooseView.xib in Resources */,
-				BFBA83341DF92B2900DF99F8 /* JFcustomHeadView.xib in Resources */,
 				BF3E10081D49B3D1003F0F89 /* CompaneyDetialController.xib in Resources */,
 				AEE5F61B1C4E199F006FAF60 /* UMSShareListController.xib in Resources */,
 				87E058D91C044DBD00C4A4C1 /* Icon-40@2x.png in Resources */,
@@ -5591,7 +5582,6 @@
 				BF40F9891DFEA22C007B8433 /* MJDictionaryCache.m in Sources */,
 				BF3C8FCC1D5834A50092AC19 /* ZXLuminanceSource.m in Sources */,
 				BF3C8FE71D5834A50092AC19 /* ZXMaxiCodeDecoder.m in Sources */,
-				BFBA83301DF9127D00DF99F8 /* JFcustomHeadView.m in Sources */,
 				591BC3AF1AEDFE6A0037199A /* ROllLabel.m in Sources */,
 				BF3C90371D5834A50092AC19 /* ZXPDF417Common.m in Sources */,
 				BF3C90561D5834A50092AC19 /* ZXMultiFormatWriter.m in Sources */,
