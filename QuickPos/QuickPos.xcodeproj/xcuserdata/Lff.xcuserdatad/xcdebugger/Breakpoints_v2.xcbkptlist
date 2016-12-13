@@ -19,22 +19,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QuickPos/ViewControllers/CarBuy/CarBuyListCell.m"
-            timestampString = "503206255.240007"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "-setModel:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "QuickPos/ViewControllers/Shop/MallViewController.m"
             timestampString = "503224058.259119"
             startingColumnNumber = "9223372036854775807"
@@ -84,7 +68,7 @@
                   moduleName = "QuickPos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Lff/Desktop/JFNewMll/QuickPos/QuickPos/ViewControllers/Shop/MallViewController.m"
-                  timestampString = "503304700.065112"
+                  timestampString = "503306693.619255"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "658"
@@ -99,7 +83,7 @@
                   moduleName = "QuickPos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Lff/Desktop/JFNewMll/QuickPos/QuickPos/ViewControllers/Shop/MallViewController.m"
-                  timestampString = "503304700.067037"
+                  timestampString = "503306693.620992"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "658"
@@ -114,7 +98,7 @@
                   moduleName = "QuickPos"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Lff/Desktop/JFNewMll/QuickPos/QuickPos/ViewControllers/Shop/MallViewController.m"
-                  timestampString = "503304700.068775"
+                  timestampString = "503306693.622682"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "658"
