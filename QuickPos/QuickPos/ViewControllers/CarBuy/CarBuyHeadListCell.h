@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class JFShopCarModel;
 @interface CarBuyHeadListCell : UITableViewCell
+
+@property (nonatomic,strong) JFShopCarModel *model;
+
+@property (weak, nonatomic) IBOutlet UIButton *selectedBtn;
+@property (weak, nonatomic) IBOutlet UILabel *shopNameLab;
+
+@property (nonatomic,assign) BOOL isSelected;
+
 
 @end

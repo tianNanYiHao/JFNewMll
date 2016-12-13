@@ -117,7 +117,7 @@
     if (self.arrSection.count != 0) {
         if (section != self.arrSection.count) {
             NSMutableArray *arr = [self.shopCarDic objectForKey:self.arrSection[section]];
-            return  (arr.count+1); 
+            return  (arr.count+1);
         }else{
             return 0;
         }
@@ -139,7 +139,6 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 15;
 }
-
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.arrSection.count != 0) {
@@ -164,16 +163,19 @@
             static NSString * iDD = @"CarBuyHeadListCell";
             CarBuyHeadListCell *cell = [tableView dequeueReusableCellWithIdentifier:iDD forIndexPath:indexPath];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.model = array[indexPath.row];
             return cell;
         }
         else{
             static NSString *stt = @"CarBuyListCell";
             CarBuyListCell *cell = [tableView dequeueReusableCellWithIdentifier:stt forIndexPath:indexPath];
+            cell.model = array[indexPath.row -1];  //取后一位
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.delegate = self;
             return cell;
         }
     }else{
-        static NSString *s = @"22222";
+        static NSString *s = @"error";
         UITableViewCell*cell = [tableView dequeueReusableCellWithIdentifier:s];
         return cell;
     }
@@ -182,7 +184,7 @@
 }
 #pragma mark - CarBuyListDelete
 -(void)chooseBtnClickDelegate:(UIButton *)btn model:(JFShopCarModel *)model{
-
+    btn.selected = !btn.selected;
 }
 -(void)jianBtnClickDelegate{
     NSLog(@"lalallal -------");

@@ -44,6 +44,10 @@
                     <constraint firstItem="snM-zs-heg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="sWo-Qc-Mwj"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="selectedBtn" destination="W2M-yl-qgu" id="byf-ir-iQg"/>
+                <outlet property="shopNameLab" destination="snM-zs-heg" id="KxQ-KZ-FEv"/>
+            </connections>
             <point key="canvasLocation" x="151" y="-84"/>
         </tableViewCell>
     </objects>

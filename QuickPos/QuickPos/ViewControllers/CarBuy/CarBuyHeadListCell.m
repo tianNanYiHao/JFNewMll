@@ -7,6 +7,7 @@
 //
 
 #import "CarBuyHeadListCell.h"
+#import "JFShopCarModel.h"
 
 @implementation CarBuyHeadListCell
 
@@ -22,5 +23,14 @@
 
     // Configure the view for the selected state
 }
+
+- (void)setModel:(JFShopCarModel *)model{
+    _model = model;
+    _selectedBtn.selected = model.isSelected;
+    _shopNameLab.text = model.store_name;
+    
+}
+
+
 
 @end
