@@ -27,6 +27,7 @@
 #import "SDCycleScrollView.h"
 #import "DetailOriginOfGoodsViewController.h"
 #import "ShopFooterReusableView.h"
+#import "JFAddMyShopProductViewController.h"
 
 #define tableCellHeight 30
 #define kHeaderReuseID @"headerView"
@@ -181,7 +182,6 @@
 @property (nonatomic,strong) NSString *cataId;
 
 
-
 @end
 
 @implementation MallViewController
@@ -246,7 +246,7 @@
     self.mallCollectionView.delegate = self;//原来的collectionView
     self.mallCollectionView.dataSource = self;//原来的collectionView
 
-     [self.mallCollectionView registerClass:[ShopFooterReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kFooterReuseId];
+//     [self.mallCollectionView registerClass:[ShopFooterReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kFooterReuseId];
 
     self.table.delegate = self;
     self.table.dataSource = self;
@@ -670,6 +670,7 @@
             [self.segview3 setHidden:YES];
             [self.Segview4 setHidden:YES];
             [self.segview5 setHidden:YES];
+          
             [self.mainView bringSubviewToFront:self.shoplist1];
             
             [MBProgressHUD showHUDAddedTo:self.view animated:YES WithString:@"正在加载商品数据."];
@@ -1399,51 +1400,29 @@
 {
     UICollectionReusableView *reusableview = nil;
     
-    if (kind == UICollectionElementKindSectionHeader)
+    if (kind == UICollectionElementKindSectionFooter)
     {
-        ShopFooterReusableView *foorerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kFooterReuseId forIndexPath:indexPath];
+        ShopFooterReusableView *footerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"ShopFooterID" forIndexPath:indexPath];
+
+        UIButton *addBtn = [[UIButton alloc]initWithFrame:CGRectMake(5,5, 155, 155)];
+        addBtn.backgroundColor = [UIColor cyanColor];
         
-        if (indexPath.section == 0) {
-            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
-            view.backgroundColor = [Common hexStringToColor:@"#2196f3"];
-            
-            UIButton *scanBtn = [[UIButton alloc]initWithFrame:CGRectMake(60, 25, 48, 48)];
-            [scanBtn setImage:[UIImage imageNamed:@"code_pay"] forState:UIControlStateNormal];
-            
-            [scanBtn addTarget:self action:@selector(scanCode:) forControlEvents:UIControlEventTouchUpInside];
-            
-            UIButton *RechargeBtn = [[UIButton alloc]initWithFrame:CGRectMake(212, 25, 48, 48)];
-            [RechargeBtn setImage:[UIImage imageNamed:@"serve_payment"] forState:UIControlStateNormal];
-            [RechargeBtn addTarget:self action:@selector(Recharge:) forControlEvents:UIControlEventTouchUpInside];
-            
-            
-            UILabel *scanLabel = [[UILabel alloc]initWithFrame:CGRectMake(60, 75, 48, 20)];
-            scanLabel.text = @"扫一扫";
-            scanLabel.textColor = [Common hexStringToColor:@"#ffffff"];
-            scanLabel.font = [UIFont systemFontOfSize:12];
-            scanLabel.adjustsFontSizeToFitWidth = YES;
-            scanLabel.textAlignment = NSTextAlignmentCenter;
-            
-//            UILabel *RechargeLabel = [[UILabel alloc]initWithFrame:CGRectMake(212, 75, 48, 20)];
-//            RechargeLabel.text = @"账户充值";
-//            RechargeLabel.textColor = [Common hexStringToColor:@"#ffffff"];
-//            RechargeLabel.font = [UIFont systemFontOfSize:14];
-//            RechargeLabel.adjustsFontSizeToFitWidth = YES;
-//            scanLabel.textAlignment = UITextAlignmentCenter;
-            
-//            [view addSubview:RechargeLabel];
-            [view addSubview:scanLabel];
-            [view addSubview:scanBtn];
-            [view addSubview:RechargeBtn];
-            [foorerView addSubview:view];
-        }
-        reusableview = foorerView;
+        [addBtn setImage:[UIImage imageNamed:@"AddingGoods"] forState:UIControlStateNormal];
+        [addBtn addTarget:self action:@selector(addCommodity:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UILabel *addLable = [[UILabel alloc]initWithFrame:CGRectMake(5, 160, 155, 20)];
+        addLable.text = @"添加商品";
+        addLable.textColor = [UIColor lightGrayColor];
+        addLable.font = [UIFont systemFontOfSize:14];
+        addLable.textAlignment = NSTextAlignmentCenter;
+        
+        [footerView addSubview:addLable];
+        [footerView addSubview:addBtn];
+        reusableview = footerView;
     }
     
     return reusableview;
 }
-
-
 
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -1513,6 +1492,16 @@
     }
     
 }
+
+#pragma mark ------添加商品跳转 ------
+
+- (void)addCommodity:(UIButton *)btn
+{
+    JFAddMyShopProductViewController *JFAddMyShopProductVc = [[JFAddMyShopProductViewController alloc]init];
+    [self.navigationController pushViewController:JFAddMyShopProductVc animated:YES];
+    NSLog(@"<<<<<<添加商品>>>>>>");
+}
+
 
 - (void)tongzhi:(NSNotification *)noti {
     NSLog(@"%@",noti);
