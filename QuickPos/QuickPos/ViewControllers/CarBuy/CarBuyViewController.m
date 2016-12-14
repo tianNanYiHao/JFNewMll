@@ -28,9 +28,6 @@
 @end
 
 @implementation CarBuyViewController
-/**
- 店铺名称数组
- */
 -(NSMutableArray*)arrSection{
     if (!_arrSection) {
         _arrSection = [NSMutableArray arrayWithCapacity:0];
@@ -53,18 +50,12 @@
     return _model;
 }
 
-/**
- 选中的商品数组
- */
+
 - (NSMutableArray *)selectedShopArray{
     if (!_selectedShopArray) {
         _selectedShopArray = [NSMutableArray new];
     }return _selectedShopArray;
 }
-
-/**
- 选中的商店数组
- */
 - (NSMutableArray *)selectedStoreArray{
     if (!_selectedStoreArray) {
         _selectedStoreArray = [NSMutableArray new];
@@ -194,6 +185,11 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             cell.model = array[indexPath.row];
             cell.delegate = self;
+            if ([self.selectedStoreArray containsObject:@(cell.model.store_id)]) {
+                cell.selectedBtn.selected = YES;
+            }else{
+                cell.selectedBtn.selected = NO;
+            }
             return cell;
         }
         else{
@@ -211,10 +207,11 @@
     }
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
 }
 #pragma mark - CarBuyListDelete
 -(void)chooseBtnClickDelegate:(UIButton *)btn model:(JFShopCarModel *)model{
-    //
+
     if ([self.selectedShopArray containsObject:model]) {
         [self.selectedShopArray removeObject:model];
         model.isSelected = NO;
@@ -223,20 +220,53 @@
         [self.selectedShopArray addObject:model];
         model.isSelected = YES;
     }
+
+    BOOL isExist = YES;
+    NSArray *arrModel = [self.shopCarDic objectForKey:@(model.store_id)];
+    for (JFShopCarModel *model in arrModel) {
+        if (![self.selectedShopArray containsObject:model]) {
+            isExist = NO;
+            break;
+        }
+    }
+
+    if (isExist && ![self.selectedStoreArray containsObject:@(model.store_id)]) {
+        [self.selectedStoreArray addObject:@(model.store_id)];
+    }
+  
+    if (!isExist && [self.selectedStoreArray containsObject:@(model.store_id)]) {
+        [self.selectedStoreArray removeObject:@(model.store_id)];
+    }
+    
     [_tableShowView reloadData];
 }
--(void)jianBtnClickDelegate{
-    NSLog(@"lalallal -------");
-}
--(void)jiaBtnClickDelegate{
-    NSLog(@"lalalal ++++");
+-(void)shopCarBuyCellChange:(CarBuyListCell *)cell{
+    
 }
 
 #pragma mark - CarBuyHeadviewListDelegate
--(void)chooseStoreBtn:(UIButton *)btn store_id:(NSInteger)storeId{
-    
-    
-    
+-(void)chooseStoreBtn:(UIButton *)btn store_id:(NSInteger)store_id{
+    NSArray *arrayModel = [self.shopCarDic objectForKey:@(store_id)];
+ 
+    if ([self.selectedStoreArray containsObject:@(store_id)]) {
+        [self.selectedStoreArray removeObject:@(store_id)];
+      
+        for (JFShopCarModel *model  in arrayModel) {
+            [self.selectedShopArray removeObject:model];
+            model.isSelected = NO;
+        }
+    }else{
+      
+        [self.selectedStoreArray addObject:@(store_id)];
+       
+        for (JFShopCarModel *model in arrayModel) {
+            if (![self.selectedShopArray containsObject:model]) {
+                [self.selectedShopArray addObject:model];
+                model.isSelected = YES;
+            }
+        }
+    }
+    [_tableShowView reloadData];
     
 }
 

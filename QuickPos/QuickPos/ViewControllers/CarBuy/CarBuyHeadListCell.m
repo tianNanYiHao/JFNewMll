@@ -31,6 +31,7 @@
 }
 
 - (IBAction)storebtnclick:(UIButton*)sender {
+    sender.selected = !sender.selected;
     CarBuyHeadListCell *cell = (CarBuyHeadListCell*)sender.superview.superview;
     if ([_delegate respondsToSelector:@selector(chooseStoreBtn:store_id:)]) {
         [_delegate chooseStoreBtn:sender store_id:cell.model.store_id];
