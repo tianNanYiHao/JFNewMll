@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class JFShopCarModel;
 @protocol CarBuyHeadListCellDelegate <NSObject>
--(void)chooseStoreBtn:(UIButton*)btn store_id:(NSInteger)storeId;
+-(void)chooseStoreBtn:(UIButton*)btn store_id:(NSInteger)store_id;
 
 @end
 

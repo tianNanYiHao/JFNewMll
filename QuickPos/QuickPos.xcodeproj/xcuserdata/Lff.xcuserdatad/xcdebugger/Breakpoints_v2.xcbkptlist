@@ -59,53 +59,6 @@
             endingLineNumber = "658"
             landmarkName = "-segmentACT:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__33-[MallViewController segmentACT:]_block_invoke"
-                  moduleName = "QuickPos"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Lff/Desktop/JFNewMll/QuickPos/QuickPos/ViewControllers/Shop/MallViewController.m"
-                  timestampString = "503306693.619255"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "658"
-                  endingLineNumber = "658"
-                  offsetFromSymbolStart = "252">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_.410"
-                  moduleName = "QuickPos"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Lff/Desktop/JFNewMll/QuickPos/QuickPos/ViewControllers/Shop/MallViewController.m"
-                  timestampString = "503306693.620992"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "658"
-                  endingLineNumber = "658"
-                  offsetFromSymbolStart = "116">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.411"
-                  moduleName = "QuickPos"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Lff/Desktop/JFNewMll/QuickPos/QuickPos/ViewControllers/Shop/MallViewController.m"
-                  timestampString = "503306693.622682"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "658"
-                  endingLineNumber = "658"
-                  offsetFromSymbolStart = "64">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
