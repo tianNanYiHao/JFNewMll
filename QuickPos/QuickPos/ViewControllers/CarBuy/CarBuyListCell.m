@@ -38,12 +38,10 @@
     JFShopCarModel *model = cell.model;
     NSLog(@"----------");
     if (_count !=1) {
-        _count = _count-1;
+        self.count -= 1;
         model.goods_num = _count;
         [_delegate shopCarBuyCellChange:self];
     }
-    
-    
 }
 
 //+
@@ -52,7 +50,7 @@
     JFShopCarModel *model = cell.model;
      NSLog(@"+++++++");
     if (_count<99) {
-        _count += 1;
+        self.count += 1;
          model.goods_num = _count;
          [_delegate shopCarBuyCellChange:self];
     }
@@ -71,7 +69,7 @@
     _titleLab.text = model.goods_name;
     [_titleLab sizeToFit];
     _moneyLab.text = [NSString stringWithFormat:@"%.2f",model.goods_price];
-     _countLab.text = [NSString stringWithFormat:@"%ld",(long)(long)model.goods_num];
+     _countLab.text = [NSString stringWithFormat:@"%ld",(long)model.goods_num];
     self.count = model.goods_num;
 }
 
