@@ -107,12 +107,14 @@
     
     
     
-    [self creatRightBtn];
+//    [self creatRightBtn];
     
 
     userDefaults = [NSUserDefaults standardUserDefaults];
     
     self.navigationController.navigationBarHidden = NO;
+    
+    self.navigationItem.rightBarButtonItem = nil;//隐藏右上角按钮
     
     self.tabBarController.tabBar.hidden = NO;
     
@@ -121,7 +123,7 @@
     self.myAccountTableView.delaysContentTouches = NO; //值为NO时，UIScrollView会立马将接收到的手势分发到子视图上。
     
     [self.myAccountTableView registerNib:[UINib nibWithNibName:@"MyAccount2TableViewCell" bundle:nil] forCellReuseIdentifier:@"MyAccount2TableViewCell"];
-    //self.myAccountTableView.separatorStyle = NO;
+
     self.myAccountTableView.tableFooterView = self.OutFootView;
     
     requst = [[Request alloc]initWithDelegate:self];
@@ -129,8 +131,7 @@
     self.tuichu.layer.cornerRadius = 5;
     self.tuichu.titleLabel.textColor = [UIColor whiteColor];
     self.tuichu.backgroundColor = [Common hexStringToColor:@"fe976f"];
-    //    [self.tuichu setImage:[Common createImageWithColor:[Common hexStringToColor:@"fe976f"]] forState:UIControlStateNormal];
-    //    [self.tuichu setImage:[Common createImageWithColor:[Common hexStringToColor:@"ef865e"]] forState:UIControlStateHighlighted];
+ 
     self.OutFootView.backgroundColor = [UIColor groupTableViewBackgroundColor];
 }
 
@@ -387,9 +388,10 @@
         
         MyAccountHeaderTableViewCell *headerCell =(MyAccountHeaderTableViewCell *) [tableView dequeueReusableCellWithIdentifier:headerCellCellIdentifier];
         
-        headerCell.backgroundColor = [Common hexStringToColor:@"#2196f3"];
-        
+//        headerCell.backgroundColor = [Common hexStringToColor:@"#2196f3"];
+     
         headerCell.usernameLabel.text = realNameStr;
+        headerCell.usernameLabel.textColor = [UIColor lightGrayColor];
         headerCell.moneyLabel.text = availableAmtStr;
         headerCell.withdrawalLabel.text = cashAvailableAmtStr;
         headerCell.AccountBalance.text = [NSString stringWithFormat:@"%@元",availableAmtStr];
@@ -398,7 +400,8 @@
         
         headerCell.selectionStyle = UITableViewCellSelectionStyleNone;
         headerCell.headicon.image = [UIImage imageNamed:@"account_logo"];
-        headerCell.contentView.backgroundColor = [UIColor colorWithRed:63/255.0 green:146/255.0 blue:236/255.0 alpha:1];
+//        headerCell.contentView.backgroundColor = [UIColor colorWithRed:63/255.0 green:146/255.0 blue:236/255.0 alpha:1];
+        headerCell.contentView.backgroundColor = [UIColor whiteColor];
         return headerCell;
     }
     
@@ -575,13 +578,13 @@
     
     
     
-    else if(indexPath.section == 3 && indexPath.row == 0){//激活码
+    else if(indexPath.section == 2 && indexPath.row == 0){//激活码
         
         [requst quickPayCodeState];
         
     }
     
-    else if(indexPath.section == 3 && indexPath.row == 1){
+    else if(indexPath.section == 2 && indexPath.row == 1){
         
         MyChangePasswordViewController *myChangePasswordVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyChangePasswordVC"];
         
