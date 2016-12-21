@@ -131,6 +131,8 @@
     contentY = 0;
     self.menuCollectionView.alwaysBounceVertical = YES;
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = nil;//隐藏右上角按钮
+    
     request = [[Request alloc]initWithDelegate:self];
     
     //不需要登陆改成这样

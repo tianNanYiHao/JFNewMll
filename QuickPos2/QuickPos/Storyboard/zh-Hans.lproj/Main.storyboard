@@ -2284,11 +2284,11 @@
             </objects>
             <point key="canvasLocation" x="2497" y="2010"/>
         </scene>
-        <!--我的账户-->
+        <!--个人中心-->
         <scene sceneID="jNx-XH-tu6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="poN-d5-izr" customClass="QuickPosNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的账户" image="tab_account_normal" selectedImage="tab_account_press" id="GWe-ye-9RC"/>
+                    <tabBarItem key="tabBarItem" title="个人中心" image="tab_account_normal" selectedImage="tab_account_press" id="GWe-ye-9RC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" shadowImage="jiantou" backIndicatorImage="jiantou" backIndicatorTransitionMaskImage="jiantou" id="nfY-MV-tkf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -6913,7 +6913,7 @@
             </objects>
             <point key="canvasLocation" x="2845" y="2626"/>
         </scene>
-        <!--我的账户-->
+        <!--个人中心-->
         <scene sceneID="6iI-3b-2Yp">
             <objects>
                 <viewController id="X8E-4X-eKg" customClass="MyAccountViewController" sceneMemberID="viewController">
@@ -7139,8 +7139,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="我的账户" image="zhanghu" id="tyr-t9-Soe"/>
-                    <navigationItem key="navigationItem" title="我的账户" id="qd0-eI-8GH">
+                    <tabBarItem key="tabBarItem" title="个人中心" image="zhanghu" id="tyr-t9-Soe"/>
+                    <navigationItem key="navigationItem" title="个人中心" id="qd0-eI-8GH">
                         <barButtonItem key="rightBarButtonItem" image="serve_more" id="pk0-4C-fCK">
                             <connections>
                                 <action selector="showSetup:" destination="X8E-4X-eKg" id="Rjx-yS-pWg"/>
