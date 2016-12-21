@@ -48,6 +48,8 @@
 
 #define kHeaderReuseID @"headerView"
 #define kFooterReuseId @"footerView"
+#import "AddBankcardViewController.h"
+
 
 
 @interface ConvenientServiceViewController ()<UICollectionViewDataSource,UICollectionViewDelegate, ResponseData,SDCycleScrollViewDelegate,ABCIntroViewDelegate>
@@ -188,7 +190,7 @@
     self.titleAllArr = [NSArray array];
     if (!isResult) {
 
-        NSArray *titleArr1 = @[@"账户转账",@"即时取",@"余额查询",@"卡卡转账",@"信用卡还款",@"微信收款",@"支付宝收款",@"手机充值",@"水电煤",@"电影票购买",@"中华保险",@"点卡充值"];
+        NSArray *titleArr1 = @[@"收款",@"绑卡",@"提现",@"卡卡转账",@"信用卡还款",@"微信收款",@"支付宝收款",@"手机充值",@"水电煤",@"电影票购买",@"中华保险",@"点卡充值"];
         
         NSArray *titleArr2 = @[@"流量充值",@"交通违章代办",@"火车票订购",@"飞机票订购"];//@"",@""
         
@@ -294,7 +296,7 @@
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     if (section == 0) {
-        return 12;
+        return 3;
     }
     return [self.menuDataArr[section] count];
     
@@ -325,12 +327,12 @@
 
 //cell的最小行间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
-    return 7;
+    return 2;
 }
 
 //cell的最小列间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
-    return 7;
+    return 2;
 }
 
 //定义每个collectionCell 的边缘
@@ -342,8 +344,6 @@
 
 
 
-
-
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     //登陆判断
@@ -352,64 +352,78 @@
         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         if (indexPath.section == 0) {
             
-            if (indexPath.row == 0) {//账户转账
-                TransferViewController *transferVc = [mainStoryboard instantiateViewControllerWithIdentifier:@"TransferViewController"];
-                transferVc.hidesBottomBarWhenPushed = YES;
-                [self.navigationController pushViewController:transferVc animated:YES];
-            }else if (indexPath.row == 1){//即时取
-                
-                WithdrawalViewController *WithdrawalVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"WithdrawalVC"];
-                WithdrawalVC.destinationType = WITHDRAW;
-                WithdrawalVC.navigationItem.title = L(@"Withdrawal");
-                WithdrawalVC.hidesBottomBarWhenPushed = YES;
-                [self.navigationController pushViewController:WithdrawalVC animated:YES];
-                
-                
-               
-            }else if (indexPath.row == 2){//余额查询
-                
-                BalanceEnquiryViewController *balanceEnquiryVc = [mainStoryboard instantiateViewControllerWithIdentifier:@"BalanceEnquiryViewController"];
-                balanceEnquiryVc.hidesBottomBarWhenPushed = YES;
-                [self.navigationController pushViewController:balanceEnquiryVc animated:YES];
-                
-                
-            }else if (indexPath.row == 3){//卡卡转账
-                
-                CardToCardPayViewController *cardToCardVc = [mainStoryboard instantiateViewControllerWithIdentifier:@"CardToCardPay"];
-                cardToCardVc.hidesBottomBarWhenPushed = YES;
-                [self.navigationController pushViewController:cardToCardVc animated:YES];
-                
-                
-               
-            }else if (indexPath.row == 4){//信用卡还款
-                
-                CreditCardPayViewController *creditCardPayVc = [mainStoryboard instantiateViewControllerWithIdentifier:@"CreditCardPayViewController"];
-                creditCardPayVc.hidesBottomBarWhenPushed = YES;
-                [self.navigationController pushViewController:creditCardPayVc animated:YES];
-                
-            }else if (indexPath.row == 5){//微信收款
-                
+            if (indexPath.row == 0) {// 收款
+//                TransferViewController *transferVc = [mainStoryboard instantiateViewControllerWithIdentifier:@"TransferViewController"];
+//                transferVc.hidesBottomBarWhenPushed = YES;
+//                [self.navigationController pushViewController:transferVc animated:YES];
                 UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-                WeChatBankListViewController *WeChatBankListVc = [mainStoryboard instantiateViewControllerWithIdentifier:@"WeChatBankListVc"];
+                RechargeViewController *RechargeViewVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"RechargeViewVC"];
+                RechargeViewVC.isRechargeView = YES;
+                RechargeViewVC.hidesBottomBarWhenPushed = YES;
+                RechargeViewVC.titleNmae = @"收款";
+                RechargeViewVC.moneyTitle = @"输入收款金额";
+                RechargeViewVC.comfirBtnTitle = @"确认收款";
+                [self.navigationController pushViewController:RechargeViewVC animated:YES];
+            }else if (indexPath.row == 1){// 绑卡
+//                WithdrawalViewController *WithdrawalVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"WithdrawalVC"];
+//                WithdrawalVC.destinationType = WITHDRAW;
+//                WithdrawalVC.navigationItem.title = L(@"Withdrawal");
+//                WithdrawalVC.hidesBottomBarWhenPushed = YES;
+//                [self.navigationController pushViewController:WithdrawalVC animated:YES];
                 
-                WeChatBankListVc.state = self.state;
-                WeChatBankListVc.hidesBottomBarWhenPushed = YES;
-                [self.navigationController pushViewController:WeChatBankListVc animated:YES];
-            }else if (indexPath.row == 6){//支付宝收款
+                AddBankcardViewController *addBankcardVC = [self.storyboard instantiateViewControllerWithIdentifier:@"AddBankcardVC"];
+                addBankcardVC.hidesBottomBarWhenPushed = YES;
+                addBankcardVC.destinationType = WITHDRAW;
+                [self.navigationController pushViewController:addBankcardVC animated:YES];
+            }else if (indexPath.row == 2){// 提现
+                    WithdrawalViewController *WithdrawalVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"WithdrawalVC"];
+                    WithdrawalVC.destinationType = WITHDRAW;
+                    WithdrawalVC.navigationItem.title = L(@"Withdrawal");
+                    WithdrawalVC.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:WithdrawalVC animated:YES];
+//                BalanceEnquiryViewController *balanceEnquiryVc = [mainStoryboard instantiateViewControllerWithIdentifier:@"BalanceEnquiryViewController"];
+//                balanceEnquiryVc.hidesBottomBarWhenPushed = YES;
+//                [self.navigationController pushViewController:balanceEnquiryVc animated:YES];
                 
-                
-                
-                ZFBBankCardListViewController *ZFBBankCardListVc = [mainStoryboard instantiateViewControllerWithIdentifier:@"ZFBBankCardListVc"];
-                ZFBBankCardListVc.hidesBottomBarWhenPushed = YES;
-                [self.navigationController pushViewController:ZFBBankCardListVc animated:YES];
-                
-            }else if (indexPath.row == 7){//手机充值
-                
-                PhoneRechargeViewController *phoneRechargeVc = [mainStoryboard instantiateViewControllerWithIdentifier:@"PhoneRechargeViewController"];
-                phoneRechargeVc.hidesBottomBarWhenPushed = YES;
-                [self.navigationController pushViewController:phoneRechargeVc animated:YES];
                 
             }
+//                else if (indexPath.row == 3){//卡卡转账
+//
+//                CardToCardPayViewController *cardToCardVc = [mainStoryboard instantiateViewControllerWithIdentifier:@"CardToCardPay"];
+//                cardToCardVc.hidesBottomBarWhenPushed = YES;
+//                [self.navigationController pushViewController:cardToCardVc animated:YES];
+//                
+//                
+//               
+//            }else if (indexPath.row == 4){//信用卡还款
+//                
+//                CreditCardPayViewController *creditCardPayVc = [mainStoryboard instantiateViewControllerWithIdentifier:@"CreditCardPayViewController"];
+//                creditCardPayVc.hidesBottomBarWhenPushed = YES;
+//                [self.navigationController pushViewController:creditCardPayVc animated:YES];
+//                
+//            }else if (indexPath.row == 5){//微信收款
+//                
+//                UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//                WeChatBankListViewController *WeChatBankListVc = [mainStoryboard instantiateViewControllerWithIdentifier:@"WeChatBankListVc"];
+//                
+//                WeChatBankListVc.state = self.state;
+//                WeChatBankListVc.hidesBottomBarWhenPushed = YES;
+//                [self.navigationController pushViewController:WeChatBankListVc animated:YES];
+//            }else if (indexPath.row == 6){//支付宝收款
+//                
+//                
+//                
+//                ZFBBankCardListViewController *ZFBBankCardListVc = [mainStoryboard instantiateViewControllerWithIdentifier:@"ZFBBankCardListVc"];
+//                ZFBBankCardListVc.hidesBottomBarWhenPushed = YES;
+//                [self.navigationController pushViewController:ZFBBankCardListVc animated:YES];
+//                
+//            }else if (indexPath.row == 7){//手机充值
+//                
+//                PhoneRechargeViewController *phoneRechargeVc = [mainStoryboard instantiateViewControllerWithIdentifier:@"PhoneRechargeViewController"];
+//                phoneRechargeVc.hidesBottomBarWhenPushed = YES;
+//                [self.navigationController pushViewController:phoneRechargeVc animated:YES];
+//                
+//            }
             else
             {//正在努力建设中...
                 NoteViewController *noteVc = [mainStoryboard instantiateViewControllerWithIdentifier:@"NoteViewController"];
@@ -438,18 +452,7 @@
 - (void)Recharge:(UIButton *)Btn
 {
     if ([[AppDelegate getUserBaseData].mobileNo length] > 0){
-        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        
-        RechargeViewController *RechargeViewVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"RechargeViewVC"];
-        
-        RechargeViewVC.isRechargeView = YES;
-        RechargeViewVC.hidesBottomBarWhenPushed = YES;
-        RechargeViewVC.titleNmae = @"账户充值";
-        RechargeViewVC.moneyTitle = @"输入充值金额";
-        RechargeViewVC.comfirBtnTitle = @"确认充值";
-        
-        [self.navigationController pushViewController:RechargeViewVC animated:YES];
-        
+       
     }else
     {
         UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

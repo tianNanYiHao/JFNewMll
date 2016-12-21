@@ -11,4 +11,13 @@
 @implementation CollectionCell
 @synthesize imageView;
 @synthesize titleLabel;
+
+-(void)layoutSubviews{
+//    self.width = 100;
+//    self.height = 100;
+//    self.contentView.width = 100;
+//    self.contentView.height = 100;
+    
+    
+}
 @end
