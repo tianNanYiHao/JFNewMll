@@ -257,88 +257,88 @@
 }
 
 
-- (IBAction)radioAction:(RadioButton *)sender{
-    if (sender.tag == 11) {// 批发
-
-        
-//        if ([payTool isEqualToString:@"01"]) {
-//            if (_isRechargeView) {
-//               }
-//            else
-//            {
-//                merchantId = @"0008000001";
-//                productId = @"0000000000";
-//            }
-//            
-//        }
-//        _button7.selected = YES;
-//        merchantId = @"0002000002";
-//        productId = @"0000000005";
-//        
-//        
-//    }else if (sender.tag == 22){//零售
+//- (IBAction)radioAction:(RadioButton *)sender{
+//    if (sender.tag == 11) {// 批发
 //
+//        
+////        if ([payTool isEqualToString:@"01"]) {
+////            if (_isRechargeView) {
+////               }
+////            else
+////            {
+////                merchantId = @"0008000001";
+////                productId = @"0000000000";
+////            }
+////            
+////        }
+////        _button7.selected = YES;
+////        merchantId = @"0002000002";
+////        productId = @"0000000005";
+////        
+////        
+////    }else if (sender.tag == 22){//零售
+////
+////        if ([payTool isEqualToString:@"01"]) {
+////            if (_isRechargeView) {
+////            }else{
+////                merchantId = @"0008000003";
+////                productId = @"0000000000";
+////            }
+////            
+////        }
+//        _button1.selected = NO;
+//        
+//        _button3.selected = YES;
+//        merchantId = @"0005000001";
+//        productId = @"0000000000";
+//        [Common showMsgBox:@"" msg:@"功能暂未开放" parentCtrl:self];
+//   
+//        
+//    }else  if (sender.tag == 33){//团购
+//        
 //        if ([payTool isEqualToString:@"01"]) {
 //            if (_isRechargeView) {
+//                
+//                merchantId = @"0002000002";
+//                productId = @"0000000002";
 //            }else{
-//                merchantId = @"0008000003";
+//                merchantId = @"0008000002";
 //                productId = @"0000000000";
 //            }
-//            
+//            _button7.selected = YES;
+//            merchantId = @"0005000001";
+//            productId = @"0000000000";
 //        }
-        _button1.selected = NO;
-        
-        _button3.selected = YES;
-        merchantId = @"0005000001";
-        productId = @"0000000000";
-        [Common showMsgBox:@"" msg:@"功能暂未开放" parentCtrl:self];
-   
-        
-    }else  if (sender.tag == 33){//团购
-        
-        if ([payTool isEqualToString:@"01"]) {
-            if (_isRechargeView) {
-                
-                merchantId = @"0002000002";
-                productId = @"0000000002";
-            }else{
-                merchantId = @"0008000002";
-                productId = @"0000000000";
-            }
-            _button7.selected = YES;
-            merchantId = @"0005000001";
-            productId = @"0000000000";
-        }
-    }
-    NSLog(@"%@,%@",merchantId,productId);
-}
-- (IBAction)payWayChoose:(RadioButton *)sender {
-    if (sender.tag == 77) {
-        
-        if (_button1.selected == YES) { //T+0
-            merchantId = @"0002000002";
-            productId = @"0000000005";
-
-        }else if(_button3.selected == YES){ //T+1
-            merchantId = @"0005000001";
-            productId = @"0000000000";
-        }
-        
-    }else if (sender.tag == 88){
-        
+//    }
+//    NSLog(@"%@,%@",merchantId,productId);
+//}
+//- (IBAction)payWayChoose:(RadioButton *)sender {
+//    if (sender.tag == 77) {
+//        
 //        if (_button1.selected == YES) { //T+0
 //            merchantId = @"0002000002";
-//            productId = @"0000000006";
-//            
+//            productId = @"0000000005";
+//
 //        }else if(_button3.selected == YES){ //T+1
-//            merchantId = @"0002000002";
-//            productId = @"0000000002";
+//            merchantId = @"0005000001";
+//            productId = @"0000000000";
 //        }
-         _button8.selected = NO;
-         [Common showMsgBox:@"" msg:@"功能暂未开放" parentCtrl:self];
-    }
-    
-}
+//        
+//    }else if (sender.tag == 88){
+//        
+////        if (_button1.selected == YES) { //T+0
+////            merchantId = @"0002000002";
+////            productId = @"0000000006";
+////            
+////        }else if(_button3.selected == YES){ //T+1
+////            merchantId = @"0002000002";
+////            productId = @"0000000002";
+////        }
+//         _button8.selected = NO;
+//         [Common showMsgBox:@"" msg:@"功能暂未开放" parentCtrl:self];
+//    }
+//    
+//}
 
 
 //右侧点击按钮
@@ -371,7 +371,6 @@
     self.hidesBottomBarWhenPushed = YES;
     [self.navigationController setNavigationBarHidden:NO];
     [self.comfirt setTitle:_comfirBtnTitle forState:UIControlStateNormal];
-//    self.finalPrice.text = moneyTitle;
     NSLog(@"%@",moneyTitle);
     
     
@@ -383,14 +382,6 @@
 //        _isRechargeView = YES;
         self.finalPrice.placeholder = moneyTitle;
         [self PromptTipString:@"ZFSK"];
-        
-    }else
-    {
-        self.finalPrice.placeholder = moneyTitle;
-        NSLog(@"%@",moneyTitle);
-        self.finalPrice.enabled = NO;
-        self.phoneView.hidden = YES;
-       
         
     }
     
@@ -411,19 +402,25 @@
     if (_isRechargeView) {  //如果是充值页面 给id赋初值
 //        merchantId = @"0002000002";
 //        productId = @"0000000005";
-        merchantId = @"0005000001";
-        productId = @"0000000000";
-        _button5.hidden = NO;
-        _button2.hidden = YES;
-        _button7.selected = YES;
-        _YTpayWay = @"NYT";
-    }else
-    {
-        _button5.hidden = YES;
-        _button2.hidden = YES;
-        _button7.selected = YES;
-        merchantId = @"0008000001";
-        productId = @"0000000000";
+//        merchantId = @"0005000001";
+//        productId = @"0000000000";
+//        _button5.hidden = NO;
+//        _button2.hidden = YES;
+//        _button7.selected = YES;
+//        _YTpayWay = @"NYT";
+        merchantId = @"0001000006";
+        productId = @"0000000004";
+        self.phoneView.hidden = YES;
+        self.radioBottomView.hidden = YES;
+        self.radioBottom2.hidden = YES;
+        self.ExplainLabel1.hidden = YES;
+        self.ExplainLabel2.hidden = YES;
+        _YTpayWay = @"YT";
+        _titleNmae = @"微信充值";
+        infoKeyArray = [[NSArray alloc] init];
+        infoKeyArray = @[WXMERCHANTCODE,WXBACKURL,WXKEY];
+        [self PromptTipString:@"ZWX"];
+
     }
    
     
@@ -435,13 +432,14 @@
     _button7.groupButtons = @[_button7,_button8];
     
     _button6.hidden = YES;
-    _button4.selected = YES;
+    _button444.selected = YES;
+    _button4.hidden = YES;
+    _button5.hidden = YES;
     _button3.selected = YES;
     _radioBottomView.hidden = YES;
     _radioBottom2.hidden = YES;
     _button7.selected = YES;
     _button666.hidden = YES;
-    
     self.phoneView.hidden = YES;
     self.isAccount = @"0";
 }
