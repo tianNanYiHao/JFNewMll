@@ -319,6 +319,7 @@
     }
     if (section == 1){
         if ([UserTypes integerValue] == 0) {
+        
             return 2;
         }else{
             return 1;
@@ -367,7 +368,7 @@
         
     }
     
-    if(indexPath.section == 1 && indexPath.row == 0){
+    if(indexPath.section == 1 && indexPath.row == 1){
         
         return 70;
     }
@@ -413,7 +414,7 @@
     
     if (indexPath.section == 1) {
     
-        if (indexPath.row == 0){
+        if (indexPath.row == 1){
             MyAccountTableViewCell *cell3 = (MyAccountTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
             cell3.titleLabel.text = @"我的分润";
             cell3.RunSub.text = self.agentRate;//分润比例
@@ -437,7 +438,7 @@
             cell3.accessoryType = UITableViewCellAccessoryNone;//取消箭头
             return cell3;
         }
-        if (indexPath.row == 1){
+        if (indexPath.row == 0){
                     if([state isEqual:@"3"]){//已通过
                         
                         cell.titleLabel.text = L(@"ImproveInformationForCertified");
@@ -534,6 +535,7 @@
             cell.RunSubLabel.hidden = YES;
             cell.RunSub.hidden = YES;
             cell.lineView.hidden = YES;
+            cell.titleLabel2.text = @"";
             
         }
         if (indexPath.row == 1){
@@ -556,7 +558,7 @@
 //点击cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if(indexPath.section == 1 && indexPath.row == 0){//我的分润提现
+    if(indexPath.section == 1 && indexPath.row == 1){//我的分润提现
         MyRunSubWithdrawViewController *MyRunSubWithdrawVc = [self.storyboard instantiateViewControllerWithIdentifier:@"MyRunSubWithdrawVc"];
         MyRunSubWithdrawVc.name = realNameStr;
         MyRunSubWithdrawVc.hidesBottomBarWhenPushed = YES;
@@ -564,7 +566,7 @@
         
         
     }
-    else if (indexPath.section == 1 && indexPath.row == 1){
+    else if (indexPath.section == 1 && indexPath.row == 0){
         
         PerfectInformationViewController *informationVC = [self.storyboard instantiateViewControllerWithIdentifier:@"informationVC"]; //加载故事板中的viewController
         informationVC.authenFlag = self.authenFlag;
