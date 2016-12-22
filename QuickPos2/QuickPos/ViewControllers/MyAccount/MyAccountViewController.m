@@ -91,7 +91,7 @@
     
     [super viewDidLoad];
     
-    self.title = L(@"MyAccount");
+    self.title = @"个人中心";
     
     availableAmtStr = @"0.00";
     cashAvailableAmtStr = @"0.00";
