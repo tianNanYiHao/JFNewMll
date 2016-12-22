@@ -72,7 +72,7 @@
     
     [super viewDidLoad];
     
-    [self creatRightBtn];
+//    [self creatRightBtn];
     
     [self chooseType];
     
