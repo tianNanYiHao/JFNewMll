@@ -61,7 +61,7 @@
 - (UILabel *)noBankCarktip{
     if (!_noBankCarktip) {
         _noBankCarktip = [[UILabel alloc]initWithFrame:CGRectZero];
-        _noBankCarktip.text = @"请点击右上角添加银行卡";
+        _noBankCarktip.text = @"请绑定收款银行卡";
         _noBankCarktip.textColor = [UIColor redColor];
         _noBankCarktip.font = [UIFont systemFontOfSize:13];
         _noBankCarktip.textAlignment = NSTextAlignmentCenter;;
@@ -72,7 +72,7 @@
     
     [super viewDidLoad];
     
-    [self creatRightBtn];
+//    [self creatRightBtn];
     
     [self chooseType];
     
