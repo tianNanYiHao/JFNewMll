@@ -249,13 +249,9 @@
             NSString *isShow1 = [item objectForKey:@"isShow"];
             NSDictionary *dic1 = @{@"image": image1, @"title":title1,@"announce":announce1,@"channelID":channelID1,@"isShow":isShow1};
             if (isShow1.boolValue) {
-             
                 [self.menuDataArr1 addObject:dic1];
-               
-           
             }
         }
-        
     }
     self.menuCollectionView.delegate = self;
     self.menuCollectionView.dataSource = self;
@@ -311,7 +307,7 @@
     static NSString *collectionCellID = @"CollectionCellId";
     CollectionCell *cell = (CollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:collectionCellID forIndexPath:indexPath];
     
-    float cellWidth = SCREEN_WIDTH/4;
+    float cellWidth = SCREEN_WIDTH/3;
     float cellHeight = cellWidth;
     cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y,cellWidth, cellHeight);
     NSString *image = self.iamgeAllArr[indexPath.section][indexPath.row];
