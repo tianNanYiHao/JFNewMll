@@ -110,7 +110,6 @@
         [self.view addSubview:self.introView];
         self.tabBarController.tabBar.hidden = YES;
     }
-    
 }
 
 - (void)viewDidLoad {
@@ -198,7 +197,7 @@
         
         self.titleAllArr = @[titleArr1, titleArr2];
         
-        NSArray *imageArr1 = @[@"serve_transfer",@"serve_traffic",@"serve_query",@"serve_kakapay",@"xinyongka",@"serve_wechat",@"zhifubaochongzhi",@"serve_phone",@"serve_Waterr",@"movie_purchase",@"baoxian",@"serve_game"];
+        NSArray *imageArr1 = @[@"serve_transfer",@"serve_kakapay",@"serve_query",@"serve_traffic",@"xinyongka",@"serve_wechat",@"zhifubaochongzhi",@"serve_phone",@"serve_Waterr",@"movie_purchase",@"baoxian",@"serve_game"];
         NSArray *imageArr2 = @[@"流量充值",@"jiaotongweizhang",@"huochepiao",@"feijipiao"]; //,@"caipiao",@"QQchongzhi"
         
         self.iamgeAllArr = @[imageArr1,imageArr2];
