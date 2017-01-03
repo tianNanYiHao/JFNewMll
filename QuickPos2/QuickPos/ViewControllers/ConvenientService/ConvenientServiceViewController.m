@@ -110,7 +110,6 @@
         [self.view addSubview:self.introView];
         self.tabBarController.tabBar.hidden = YES;
     }
-    
 }
 
 - (void)viewDidLoad {
